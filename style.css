@@ -853,3 +853,13 @@ input[type="range"]{
     border-radius: 12px;
   }
 }
+/* 1) Logo-Spalte im Header breiter machen */
+.header-inner{
+  grid-template-columns: 280px 1fr auto; /* vorher 220px */
+}
+
+/* 2) Logo selbst größer machen (Breite zieht automatisch mit) */
+.brand img{
+  height: 52px;   /* vorher 44px */
+  width: auto;
+}
