@@ -1,59 +1,113 @@
 (function () {
+  const PHONE_TEL = "tel:+490000000000";
+
+  // Header compact on scroll
+  const header = document.getElementById("site-header");
+  function onScroll() {
+    if (!header) return;
+    header.classList.toggle("scrolled", window.scrollY > 8);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // Footer year
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
   // Mobile nav
   const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector("#site-nav");
+  const nav = document.getElementById("site-nav");
+
+  function closeNav() {
+    if (!toggle || !nav) return;
+    nav.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+
+  function openNav() {
+    if (!toggle || !nav) return;
+    nav.classList.add("open");
+    toggle.setAttribute("aria-expanded", "true");
+    const firstLink = nav.querySelector("a");
+    if (firstLink) firstLink.focus();
+  }
 
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
-      const isOpen = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(isOpen));
+      const isOpen = nav.classList.contains("open");
+      if (isOpen) closeNav();
+      else openNav();
+    });
+
+    // Close on link click
+    nav.addEventListener("click", (e) => {
+      const t = e.target;
+      if (t && t.tagName === "A") closeNav();
+    });
+
+    // Close on ESC / outside click
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeNav();
+    });
+
+    document.addEventListener("click", (e) => {
+      const target = e.target;
+      if (!nav.classList.contains("open")) return;
+      if (target === toggle) return;
+      if (nav.contains(target)) return;
+      closeNav();
     });
   }
 
-  // Formspree "Profil-Check" form
-  const form = document.querySelector("#check-form");
+  // Lead form (Formspree)
+  const form = document.getElementById("lead-form");
   if (form) {
     const status = document.getElementById("form-status");
     const submitBtn = form.querySelector('button[type="submit"]');
 
+    function setStatus(text) {
+      if (status) status.textContent = text;
+    }
+
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      // Browser validation (email/url etc.)
+      // Native validation first
       if (!form.reportValidity()) return;
 
+      const data = new FormData(form);
+
+      // Honeypot
+      const gotcha = (data.get("_gotcha") || "").toString().trim();
+      if (gotcha) return;
+
+      const name = (data.get("name") || "").toString().trim();
+      const company = (data.get("company") || "").toString().trim();
+      const email = (data.get("email") || "").toString().trim();
+      const phone = (data.get("phone") || "").toString().trim();
+      const url = (data.get("profile_url") || "").toString().trim();
+
+      // Basic sanity
+      if (!name || !company || !email || !url) {
+        setStatus("Bitte die Pflichtfelder ausfüllen.");
+        return;
+      }
+
+      // Subject
+      data.set("_subject", `Kostenloser Check: ${company}`);
+
       // UI state
-      if (status) status.textContent = "Sende …";
+      setStatus("Sende …");
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.dataset.prevText = submitBtn.textContent || "";
         submitBtn.textContent = "Wird gesendet …";
       }
 
-      const data = new FormData(form);
-
-      const company = (data.get("company") || "").toString().trim();
-      const gbp = (data.get("gbp") || "").toString().trim();
-      const city = (data.get("city") || "").toString().trim();
-      const email = (data.get("email") || "").toString().trim();
-
-      // Extra safety (should already be covered by reportValidity)
-      if (!company || !gbp || !city || !email) {
-        if (status) status.textContent = "Bitte die Pflichtfelder ausfüllen.";
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = submitBtn.dataset.prevText || "Check anfordern";
-        }
-        return;
-      }
-
-      // Betreff pro Firma dynamisch
-      data.set("_subject", `3-Punkte-Check Anfrage: ${company}`);
-
       try {
-        // Guard: action must be a real Formspree endpoint
+        // Guard: action must be a real endpoint
         if (!form.action || form.action.includes("DEIN_FORM_ID")) {
-          if (status) status.textContent = "Formular ist noch nicht verbunden (Formspree-ID fehlt im action-Attribut).";
+          setStatus("Formular ist noch nicht verbunden (Formspree-ID fehlt). Alternativ: bitte kurz anrufen.");
           return;
         }
 
@@ -65,21 +119,23 @@
 
         if (res.ok) {
           form.reset();
-          if (status) status.textContent = "Danke! Ihre Anfrage wurde gesendet. Ich melde mich per E-Mail.";
+          setStatus(
+            phone
+              ? "Danke! Anfrage ist raus. Ich melde mich per Rückruf oder E-Mail."
+              : "Danke! Anfrage ist raus. Ich melde mich per E-Mail. Wenn es eilt: bitte kurz anrufen."
+          );
         } else {
-          let msg = "Senden hat nicht geklappt. Bitte später erneut versuchen.";
+          let msg = "Senden hat nicht geklappt. Bitte später erneut versuchen oder kurz anrufen.";
           try {
             const json = await res.json();
             if (json && json.errors && json.errors.length) {
               msg = json.errors.map((x) => x.message).join(" ");
             }
-          } catch (err) {
-            // ignore json parse errors
-          }
-          if (status) status.textContent = msg;
+          } catch (_) {}
+          setStatus(msg);
         }
-      } catch (err) {
-        if (status) status.textContent = "Netzwerkfehler. Bitte später erneut versuchen.";
+      } catch (_) {
+        setStatus("Netzwerkfehler. Bitte später erneut versuchen oder kurz anrufen.");
       } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
@@ -87,6 +143,11 @@
         }
       }
     });
+
+    // If user is stuck, keep phone visible as fallback
+    if (status && !status.textContent.trim()) {
+      setStatus(`Wenn Sie lieber sofort sprechen möchten: ${PHONE_TEL.replace("tel:", "")}`);
+    }
   }
 
   // Profil-Score widget (heuristisch)
@@ -169,12 +230,10 @@
   }
 
   function setDonutSegments(trust, act, prof) {
-    // Show category proportions around the donut.
-    // Each value is 0..100. We map them to circumference fractions.
     const r = 46;
     const C = 2 * Math.PI * r;
-
     const total = Math.max(1, trust + act + prof);
+
     const fTrust = trust / total;
     const fAct = act / total;
     const fProf = prof / total;
@@ -183,7 +242,6 @@
     const dashAct = C * fAct;
     const dashProf = C * fProf;
 
-    // Offsets are cumulative
     const offTrust = 0;
     const offAct = -dashTrust;
     const offProf = -(dashTrust + dashAct);
@@ -197,6 +255,11 @@
     apply(els.segTrust, dashTrust, offTrust);
     apply(els.segAct, dashAct, offAct);
     apply(els.segProf, dashProf, offProf);
+
+    // simple visual differentiation without hardcoding colors
+    if (els.segTrust) els.segTrust.style.opacity = "0.95";
+    if (els.segAct) els.segAct.style.opacity = "0.75";
+    if (els.segProf) els.segProf.style.opacity = "0.55";
   }
 
   function render() {
@@ -213,7 +276,6 @@
     const trust = Math.round(100 * (0.62 * ratingScore(rating) + 0.38 * volumeScore(reviews)));
     const act = Math.round(100 * (0.60 * responseScore(response) + 0.40 * recencyScore(recency)));
     const prof = Math.round(100 * completenessScore(complete));
-
     const score = Math.round(0.45 * trust + 0.35 * act + 0.20 * prof);
 
     if (els.outTrust) els.outTrust.textContent = String(trust);
@@ -237,7 +299,6 @@
     }
   }
 
-  // Update on input
   [els.rating, els.reviews, els.response, els.recency, els.complete].forEach((el) => {
     if (!el) return;
     el.addEventListener("input", render);

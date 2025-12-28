@@ -3,323 +3,399 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Profilpflege | Google Unternehmensprofil, Bewertungen & Kundenanfragen</title>
-  <meta name="description" content="Professionelle Pflege Ihres Google Unternehmensprofils: Bewertungen beantworten, Profil aktuell halten, mehr Vertrauen und mehr Anfragen. Kostenloser Profil-Check per E-Mail." />
+  <title>ProfilWerk | Google-Unternehmensprofil Pflege & Bewertungsmanagement als Abo</title>
+  <meta name="description" content="ProfilWerk pflegt Ihr Google-Unternehmensprofil im Abo: Bewertungen beantworten, Profil aktuell halten, Review-Flow etablieren. Ziel: mehr Anrufe & Anfragen. Kostenloser Check + Telefonnummer sichtbar." />
+  <meta name="theme-color" content="#0b1220" />
 
-  <meta property="og:title" content="Profilpflege | Google Unternehmensprofil" />
-  <meta property="og:description" content="Bewertungen, Antworten, Aktualität. Kostenloser Profil-Check per E-Mail." />
+  <meta property="og:title" content="ProfilWerk | Profilpflege & Bewertungsmanagement" />
+  <meta property="og:description" content="Mehr Anrufe & Anfragen durch sichtbare Routine: Antworten, Aktualität, Review-Flow. Kostenloser Check." />
 
   <link rel="icon" href="assets/favicon.svg" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Schema.org (Platzhalter) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ProfilWerk",
+    "url": "https://DEINE-DOMAIN.DE",
+    "telephone": "+49 0000 000000",
+    "email": "info@DEINE-DOMAIN.DE",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Musterstraße 1",
+      "postalCode": "12345",
+      "addressLocality": "Musterstadt",
+      "addressCountry": "DE"
+    },
+    "areaServed": "Deutschland",
+    "description": "Abo-Service für Google-Unternehmensprofil Pflege & Bewertungsmanagement: Antworten, Aktualität, Review-Flow, Reporting."
+  }
+  </script>
 </head>
 
 <body>
   <a class="skip-link" href="#main">Zum Inhalt</a>
 
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Startseite">
-        <img src="assets/logo.svg" alt="Profilpflege" width="180" height="36" />
+        <img src="assets/logo.svg" alt="ProfilWerk" width="220" height="56" />
       </a>
 
       <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation">
-        <a href="#warum">Wirkmechanik</a>
-        <a href="#leistung">Leistung</a>
-        <a href="#dashboard">Profil-Score</a>
+        <a href="#warum">Warum</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#zahlen">Zahlen</a>
         <a href="#pakete">Pakete</a>
+        <a href="#score">Profil-Check</a>
         <a href="#faq">FAQ</a>
       </nav>
 
       <div class="header-actions">
+        <a class="btn btn-phone" href="tel:+490000000000" aria-label="Jetzt anrufen">
+          <span class="btn-ic" aria-hidden="true">☎</span>
+          <span class="btn-text">+49 0000 000000</span>
+        </a>
+
         <a class="btn btn-primary" href="#check">Kostenloser Check</a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
           Menü
         </button>
       </div>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
+    <!-- HERO -->
     <section id="top" class="hero">
       <div class="container hero-grid">
-        <div>
-          <span class="pill">
-            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none">
-              <path d="M12 2l3 7h7l-5.7 4.2 2.3 7L12 16.8 5.4 20.2l2.3-7L2 9h7l3-7Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-            </svg>
-            Google-Unternehmensprofil: sichtbar gepflegt
-          </span>
+        <div class="hero-copy">
+          <div class="pill" role="note" aria-label="Kurzversprechen">
+            Sichtbare Routine statt Zufall: Antworten, Aktualität, Review-Flow.
+          </div>
 
-          <h1 class="grad">Mehr Anfragen, weil Ihr Profil Vertrauen ausstrahlt.</h1>
+          <h1>Mehr Anrufe & Anfragen, weil Ihr Profil Vertrauen ausstrahlt.</h1>
 
           <p class="lead">
-            Menschen entscheiden bei Google in Sekunden. Bewertungen, Antworten und Aktualität wirken wie ein Vertrauenssignal.
-            Ich übernehme die laufende Profilpflege, damit Interessenten eher anrufen, buchen oder vorbeikommen.
+            Viele Interessenten entscheiden bei Google in wenigen Sekunden. Unbeantwortete Bewertungen, veraltete Infos oder ein „leises“ Profil
+            wirken wie Reibung. ProfilWerk übernimmt die laufende Pflege im Abo, damit Ihr Profil aktiv, klar und vertrauenswürdig bleibt.
           </p>
 
           <div class="hero-cta">
-            <a class="btn btn-primary" href="#check">
-              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none">
-                <path d="M20 7l-9 9-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              Kostenlosen Profil-Check anfordern
-            </a>
-            <a class="btn btn-ghost" href="#dashboard">
-              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none">
-                <path d="M4 19V5m0 14h16M7 16l3-4 4 3 5-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              Profil-Score testen
-            </a>
+            <a class="btn btn-primary" href="#check">Kostenloser Check</a>
+            <a class="btn btn-ghost" href="tel:+490000000000" aria-label="Anrufen für Rückfragen">Jetzt anrufen</a>
           </div>
 
-          <p class="microcopy">Kein Telefon nötig. Sie bekommen eine kurze Auswertung per E-Mail.</p>
+          <p class="microcopy">
+            Kostenlos & unverbindlich. Sie entscheiden danach, ob Sie es selbst umsetzen oder als Abo abgeben.
+          </p>
 
-          <div class="trust-row" role="list" aria-label="Vorteile">
+          <div class="trust-row" role="list" aria-label="Vertrauensargumente">
             <div class="trust-item" role="listitem">
-              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none">
-                <path d="M12 2l8 4v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4Z" stroke="currentColor" stroke-width="1.7"/>
-                <path d="M9 12l2 2 4-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Ruhig & professionell antworten</span>
+              <span class="trust-ic" aria-hidden="true">✓</span>
+              <span><strong>Klare Monatsroutine</strong> statt sporadischer Aktionen</span>
             </div>
             <div class="trust-item" role="listitem">
-              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none">
-                <path d="M8 7h8M8 12h8M8 17h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-                <path d="M5 3h14a2 2 0 0 1 2 2v14l-4-2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-              </svg>
-              <span>Kontinuität statt Aktionismus</span>
+              <span class="trust-ic" aria-hidden="true">✓</span>
+              <span><strong>Freigabe möglich</strong> vor Veröffentlichung</span>
             </div>
             <div class="trust-item" role="listitem">
-              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none">
-                <path d="M4 19V5m0 14h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-                <path d="M7 15l3-4 4 3 5-7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Mehr Chancen auf Anfragen</span>
+              <span class="trust-ic" aria-hidden="true">✓</span>
+              <span><strong>DSGVO-sensibel</strong> und ohne „Fake“-Methoden</span>
             </div>
           </div>
         </div>
 
-        <figure class="hero-card">
-          <div class="media">
-            <img src="assets/gbp-illustration.jpeg" alt="Illustration: Person pflegt einen Google-Firmenaccount und beantwortet Bewertungen" width="800" height="533" loading="eager"/>
+        <div class="hero-card" aria-label="Visueller Eindruck">
+          <div class="img-placeholder">
+            [BILD-ID: hero-dashboard | Prompt: Fotorealistisches, professionelles Foto einer lokalen Unternehmerin/eines Unternehmers im Büro, die/der auf einem Laptop Bewertungen beantwortet und ein neutrales Bewertungsmanagement-Dashboard sieht; keine Markenlogos, keine bekannten UI-Elemente, keine Google-Farben; ruhige, seriöse Stimmung, natürliches Fensterlicht, dezente Tiefenunschärfe, 16:10, high detail, editorial style]
           </div>
-          <figcaption class="caption">
-            Beispiel-Illustration: Profilpflege, Bewertungen und Sichtbarkeit.
-          </figcaption>
-        </figure>
+
+          <div class="hero-card-body">
+            <h2 class="h3">Der Hebel ist sichtbar</h2>
+            <p class="muted">
+              Kunden sehen nicht nur Sterne, sondern auch: <strong>Antworten</strong>, <strong>Aktivität</strong>, <strong>Vollständigkeit</strong>.
+              Genau diese Routine wird im Alltag oft vergessen und kostet dann Anfragen.
+            </p>
+            <div class="hero-mini">
+              <div class="mini">
+                <span class="k">Reaktionsroutine</span>
+                <span class="v">werktags</span>
+              </div>
+              <div class="mini">
+                <span class="k">Review-Flow</span>
+                <span class="v">einfach</span>
+              </div>
+              <div class="mini">
+                <span class="k">Report</span>
+                <span class="v">kurz & klar</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="warum" class="section section-muted">
+    <!-- VERTRAUEN -->
+    <section class="section section-muted" id="warum">
       <div class="container">
         <div class="section-head">
-          <div class="copy">
-            <h2>Warum aktive Profilpflege Kunden bringt</h2>
-            <p>
-              Menschen nutzen Bewertungen als schnelle Entscheidungshilfe. Antworten signalisieren Zuverlässigkeit.
-              Und Aktualität reduziert Unsicherheit, besonders bei lokalen Dienstleistungen.
+          <div>
+            <h2>Warum Bewertungsmanagement direkt auf Anrufe wirkt</h2>
+            <p class="muted">
+              Bewertungen sind Social Proof. Antworten reduzieren Unsicherheit. Aktualität reduziert Zweifel. Zusammen senkt das Reibung in der Entscheidung.
             </p>
           </div>
-          <div class="right">
-            <span class="pill">
-              <span class="grad-strong">Studien</span> & Praxis
-            </span>
+          <div class="section-head-cta">
+            <a class="btn btn-ghost" href="tel:+490000000000">Kurz anrufen</a>
+            <a class="btn btn-primary" href="#check">Kostenloser Check</a>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Verlustaversion</h3>
+            <p class="muted">
+              Eine unbeantwortete Kritik wirkt länger als eine gute Bewertung. Antworten zeigen: „Hier kümmert sich jemand“.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Autorität ohne Werbung</h3>
+            <p class="muted">
+              Ein gepflegtes Profil wirkt wie ein sauberer Empfang. Nicht laut, sondern professionell.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Geringe Reibung</h3>
+            <p class="muted">
+              Kurze, konsistente Routinen schlagen große Aktionen. ProfilWerk macht daraus einen festen Prozess.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="split">
+          <div>
+            <h2>Was passiert ohne Routine</h2>
+            <p class="muted">
+              Das Profil wird nicht „schlecht“. Es wird einfach still und still wirkt unsicher.
+              Typische Folgen im Alltag:
+            </p>
+
+            <ul class="checklist">
+              <li>Neue Bewertungen bleiben unbeantwortet und wirken wie offene Konflikte.</li>
+              <li>Infos sind veraltet (Öffnungszeiten, Leistungen, Attribute) und erzeugen Rückfragen oder Absprünge.</li>
+              <li>Weniger Review-Impulse, weil kein einfacher Prozess existiert.</li>
+              <li>Wettbewerber wirken aktiver und bekommen den Anruf zuerst.</li>
+            </ul>
+
+            <div class="callout">
+              <strong>Merksatz:</strong> Wenn Menschen unsicher sind, rufen sie nicht an. Sie klicken weiter.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="img-placeholder">
+              [BILD-ID: calm-trust-scene | Prompt: Fotorealistisches Bild einer ruhigen Empfangssituation in einem lokalen Dienstleistungsbetrieb (z.B. Handwerk, Praxis oder Studio), freundlicher Mitarbeiter im Gespräch, seriös, warmes Licht, keine Marken, keine Logos, keine Schrift im Bild, 3:2, high detail]
+            </div>
+            <h3 style="margin-top:14px;">Zielbild</h3>
+            <p class="muted">
+              Ein Profil, das so wirkt wie Ihr bester Mitarbeiter: schnell, freundlich, verbindlich. Auch wenn Sie gerade arbeiten.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABLAUF -->
+    <section class="section section-muted" id="ablauf">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>So funktioniert ProfilWerk (3–5 klare Schritte)</h2>
+            <p class="muted">Kein Overhead. Ein Prozess, der im Alltag wirklich durchgehalten wird.</p>
+          </div>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <strong>Kurzer Start-Check</strong>
+            <span class="muted">Wir prüfen Profilzustand, Antworten, Vollständigkeit und offensichtliche Reibungspunkte.</span>
+          </li>
+          <li>
+            <strong>Tonalität & Freigabe-Regeln</strong>
+            <span class="muted">Wie soll es klingen? Wer gibt frei? Was ist „No-Go“? Alles wird festgelegt.</span>
+          </li>
+          <li>
+            <strong>Antwort-Routine</strong>
+            <span class="muted">Neue Bewertungen werden regelmäßig bearbeitet, ruhig und lösungsorientiert.</span>
+          </li>
+          <li>
+            <strong>Review-Flow</strong>
+            <span class="muted">Ein einfacher Weg, wie zufriedene Kunden leichter eine Bewertung abgeben (ohne Druck, ohne Incentives).</span>
+          </li>
+          <li>
+            <strong>Mini-Report</strong>
+            <span class="muted">Kurzer Überblick: was neu ist, was getan wurde, was als Nächstes sinnvoll ist.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ZAHLEN -->
+    <section class="section" id="zahlen">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Zahlen & Wirkung (sauber formuliert)</h2>
+            <p class="muted">
+              Studien zeigen deutliche Zusammenhänge zwischen Antworten, Bewertungen und Umsatz.
+              Wichtig: je nach Branche, Standort und Angebot variiert die Wirkung.
+            </p>
           </div>
         </div>
 
         <div class="bento">
-          <div class="b b-6">
-            <h3>Antworten erhöhen die Wahlwahrscheinlichkeit</h3>
-            <p>Wenn Unternehmen auf alle Bewertungen reagieren, entscheiden sich deutlich mehr Menschen dafür.</p>
+          <article class="bento-card">
             <div class="kpi">
-              <div>
-                <div class="num">+41%</div>
-                <div class="label">höhere Wahrscheinlichkeit, gewählt zu werden (Antworten auf alle Reviews)</div>
+              <div class="kpi-num">2×</div>
+              <div class="kpi-text">
+                Konsumenten sind laut BrightLocal <strong>etwa doppelt so wahrscheinlich</strong>, ein Unternehmen zu nutzen,
+                wenn auf <strong>alle</strong> Reviews geantwortet wird (vs. gar nicht antworten).
               </div>
-              <span class="tag">Reputation</span>
             </div>
-          </div>
+            <div class="source">Quelle: BrightLocal, „Responding to Online Reviews“.</div>
+          </article>
 
-          <div class="b b-6">
-            <h3>Erwartung: Reaktion ist Standard</h3>
-            <p>Viele Kunden rechnen mit einer Antwort, besonders wenn etwas schiefgelaufen ist.</p>
+          <article class="bento-card">
             <div class="kpi">
-              <div>
-                <div class="num">93%</div>
-                <div class="label">erwarten eine Antwort auf ihre Bewertung</div>
+              <div class="kpi-num">5–9%</div>
+              <div class="kpi-text">
+                In einer Harvard-Studie (Luca) führte ein <strong>1-Stern-Anstieg</strong> bei Yelp bei unabhängigen Restaurants zu
+                <strong>5–9% mehr Umsatz</strong> (je nach Modell).
               </div>
-              <span class="tag">Vertrauen</span>
             </div>
-          </div>
+            <div class="source">Quelle: Harvard Business School Working Paper, Michael Luca, „Reviews, Reputation, and Revenue: The Case of Yelp.com“.</div>
+          </article>
 
-          <div class="b b-4">
-            <h3>Tempo zählt</h3>
-            <p>Schnelle Reaktionen werden als Service-Signal gelesen.</p>
+          <article class="bento-card">
             <div class="kpi">
-              <div>
-                <div class="num">34%</div>
-                <div class="label">erwarten eine Antwort innerhalb 2 bis 3 Tagen</div>
+              <div class="kpi-num">+35%</div>
+              <div class="kpi-text">
+                Laut einer Womply-Auswertung (Zusammenfassung in Search Engine Land) hatten Unternehmen, die auf Reviews antworten,
+                <strong>im Schnitt 35% mehr Umsatz</strong>. Mehr Reviews korrelieren ebenfalls mit mehr Umsatz.
               </div>
-              <span class="tag">Service</span>
             </div>
-          </div>
+            <div class="source">Quelle: Search Engine Land (Zusammenfassung einer Womply-Studie).</div>
+          </article>
+        </div>
 
-          <div class="b b-4">
-            <h3>Frische Bewertungen</h3>
-            <p>Ein Profil wirkt lebendig, wenn neue Erfahrungen sichtbar sind.</p>
-            <div class="kpi">
-              <div>
-                <div class="num">27%</div>
-                <div class="label">achten auf Reviews aus den letzten 2 Wochen</div>
-              </div>
-              <span class="tag">Aktualität</span>
-            </div>
-          </div>
+        <p class="microcopy" style="margin-top:14px;">
+          Hinweis: Das sind Studien-/Auswertungs-Ergebnisse. Sie sind keine Garantie, sondern zeigen typische Effekte bzw. Korrelationen.
+        </p>
+      </div>
+    </section>
 
-          <div class="b b-4">
-            <h3>Bewertungen können Umsatz beeinflussen</h3>
-            <p>In einer bekannten Studie zu Online-Bewertungen zeigte sich ein messbarer Effekt auf Umsatz.</p>
-            <div class="kpi">
-              <div>
-                <div class="num">+5–9%</div>
-                <div class="label">Umsatz pro +1 Stern (Kontext: unabhängige Restaurants)</div>
-              </div>
-              <span class="tag">Impact</span>
-            </div>
-          </div>
-
-          <div class="b b-12">
-            <h3>Der mentale Shortcut: weniger Risiko, schneller „Ja“</h3>
-            <p>
-              Psychologisch wirkt ein gepflegtes Profil wie ein Sicherheitsanker: klar, aktuell, responsiv.
-              Das reduziert Zweifel und erhöht die Bereitschaft, den nächsten Schritt zu machen.
+    <!-- LEISTUNGEN + PAKETE -->
+    <section class="section section-muted" id="pakete">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Pakete (Abo), die im Alltag funktionieren</h2>
+            <p class="muted">
+              Fokus auf Outcomes: schnelle Reaktion, klare Informationen, sichtbare Aktivität. Ohne leere Versprechen.
+              Preise sind Platzhalter und können angepasst werden.
             </p>
-            <div class="badges" aria-label="Wirkprinzipien">
-              <span class="mini"><strong>Sozialer Beweis</strong> Sichtbare Erfahrungen anderer</span>
-              <span class="mini"><strong>Reziprozität</strong> Wertschätzende Antwort</span>
-              <span class="mini"><strong>Risikoreduktion</strong> Aktuelle Infos, klare Leistung</span>
-              <span class="mini"><strong>Konsistenz</strong> Regelmäßige Updates</span>
-            </div>
           </div>
+        </div>
+
+        <div class="pricing">
+          <article class="price-card">
+            <h3>Basis</h3>
+            <p class="muted">„Nichts bleibt liegen“</p>
+            <div class="price">
+              <span class="price-amount">ab 199€</span>
+              <span class="price-term">/ Monat</span>
+              <span class="price-note">zzgl. MwSt. (Platzhalter)</span>
+            </div>
+            <ul class="price-list">
+              <li>Monitoring neuer Bewertungen</li>
+              <li>Antworten auf Reviews (Kontingent/Monat, Platzhalter)</li>
+              <li>Leitfaden für Tonalität & Standards</li>
+              <li>Mini-Report (kurz, verständlich)</li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="#check">Kostenloser Check</a>
+          </article>
+
+          <article class="price-card featured" aria-label="Empfohlenes Paket">
+            <div class="tag">Empfohlen</div>
+            <h3>Wachstum</h3>
+            <p class="muted">„Aktiv & vertrauenswürdig“</p>
+            <div class="price">
+              <span class="price-amount">ab 349€</span>
+              <span class="price-term">/ Monat</span>
+              <span class="price-note">zzgl. MwSt. (Platzhalter)</span>
+            </div>
+            <ul class="price-list">
+              <li>Alles aus Basis</li>
+              <li>Profil-Feinschliff (Leistungen, Attribute, Struktur)</li>
+              <li>Review-Flow (Link/QR + Vorlage, ohne Incentives)</li>
+              <li>Aktualitäts-Impulse (z.B. kurze Updates, Platzhalter)</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="#check">Kostenloser Check</a>
+          </article>
+
+          <article class="price-card">
+            <h3>Standorte+</h3>
+            <p class="muted">„Mehrere Filialen im Griff“</p>
+            <div class="price">
+              <span class="price-amount">ab 549€</span>
+              <span class="price-term">/ Monat</span>
+              <span class="price-note">zzgl. MwSt. (Platzhalter)</span>
+            </div>
+            <ul class="price-list">
+              <li>Alles aus Wachstum</li>
+              <li>Multi-Standort-Routine (Platzhalter)</li>
+              <li>Wettbewerbs-Snapshot (z.B. quartalsweise, Platzhalter)</li>
+              <li>Optional: Freigabe-Workflow</li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="tel:+490000000000">Kurz anrufen</a>
+          </article>
         </div>
 
         <div class="callout" style="margin-top:14px;">
-          <strong>Wichtig:</strong> Keine Tricks, keine Fake-Bewertungen. Ziel ist ein ehrliches Profil, das Vertrauen aufbaut.
+          <strong>Sauber & regelkonform:</strong> Keine Fake-Bewertungen, keine Incentives, kein „Tricksen“. Fokus auf echte Kundenerfahrung und klare Kommunikation.
+        </div>
+
+        <div class="img-placeholder" style="margin-top:14px;">
+          [BILD-ID: report-mock | Prompt: Fotorealistisches Foto eines schlichten Onepage-Reports auf Papier und Tablet (neutrales Design, keine Logos, keine Markennamen), daneben Notizbuch und Stift, seriöses Bürolicht, minimalistisch, 16:9, high detail]
         </div>
       </div>
     </section>
 
-    <section id="leistung" class="section">
+    <!-- PROFIL-SCORE / AUDIT -->
+    <section class="section" id="score">
       <div class="container">
         <div class="section-head">
-          <div class="copy">
-            <h2>Was ich laufend übernehme</h2>
-            <p>Planbar, sauber, in Ihrem Ton. Auf Wunsch läuft alles über Freigabe, bevor etwas live geht.</p>
-          </div>
-        </div>
-
-        <div class="feature-grid">
-          <div class="feature">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M8 8h8M8 12h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Bewertungen beantworten</h3>
-            <p>Positiv wie kritisch, kurz, freundlich, lösungsorientiert. Optional mit Freigabe.</p>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M4 19V5m0 14h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-                <path d="M7 15l3-4 4 3 5-7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>1 bis 3 Updates pro Monat</h3>
-            <p>Leistungen, Saison, Einblicke. Damit das Profil aktiv wirkt und nicht „verlassen“ aussieht.</p>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2l8 4v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4Z" stroke="currentColor" stroke-width="1.7"/>
-                <path d="M9 12l2 2 4-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Profil aktuell halten</h3>
-            <p>Öffnungszeiten, Services, Kategorien, Fotos und Basisdaten. Alles konsistent und sauber.</p>
-          </div>
-
-          <div class="feature feature-wide">
-            <h3>Optional: Bewertungslink & QR-Code</h3>
-            <p>
-              Ein klarer, freundlicher Ablauf nach Terminen, damit mehr echte Rückmeldungen entstehen,
-              ohne Druck und ohne „Rabatt gegen Review“.
+          <div>
+            <h2>Profil-Score & Audit: in 30 Sekunden Potenzial einschätzen</h2>
+            <p class="muted">
+              Heuristische Orientierung (kein Ranking-Claim): Sterne, Menge, Antwortquote, Frische, Vollständigkeit.
+              Wenn Sie möchten, mache ich daraus einen konkreten Monatsplan.
             </p>
           </div>
-        </div>
-
-        
-        <div class="card" style="margin-top:14px;">
-          <h3>Ablauf in 4 Schritten</h3>
-          <p class="microcopy">So läuft die Profilpflege planbar und ohne Chaos.</p>
-          <div class="bento" style="margin-top:12px;">
-            <div class="b b-3" style="grid-column: span 3;">
-              <h3>1) Setup</h3>
-              <p>Zugriff als Manager, Tonalität klären, Ziele festlegen.</p>
-            </div>
-            <div class="b b-3" style="grid-column: span 3;">
-              <h3>2) Antworten</h3>
-              <p>Neue Reviews werden zeitnah beantwortet. Optional mit Freigabe.</p>
-            </div>
-            <div class="b b-3" style="grid-column: span 3;">
-              <h3>3) Updates</h3>
-              <p>Regelmäßige Beiträge und Profilpflege, damit es „lebt“.</p>
-            </div>
-            <div class="b b-3" style="grid-column: span 3;">
-              <h3>4) Kurzreport</h3>
-              <p>Monatlich: Was passiert ist und was als Nächstes sinnvoll ist.</p>
-            </div>
-          </div>
-        </div>
-
-<div class="split" style="margin-top:14px;">
-          <div class="quote">
-            <div class="meta">
-              <strong>Beispiel-Antwort (positiv)</strong>
-              <span class="stars" aria-label="5 Sterne">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.2 2.3 7L12 16.8 5.4 20.2l2.3-7L2 9h7l3-7Z" stroke="currentColor" stroke-width="1.5"/></svg>
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.2 2.3 7L12 16.8 5.4 20.2l2.3-7L2 9h7l3-7Z" stroke="currentColor" stroke-width="1.5"/></svg>
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.2 2.3 7L12 16.8 5.4 20.2l2.3-7L2 9h7l3-7Z" stroke="currentColor" stroke-width="1.5"/></svg>
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.2 2.3 7L12 16.8 5.4 20.2l2.3-7L2 9h7l3-7Z" stroke="currentColor" stroke-width="1.5"/></svg>
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.2 2.3 7L12 16.8 5.4 20.2l2.3-7L2 9h7l3-7Z" stroke="currentColor" stroke-width="1.5"/></svg>
-              </span>
-            </div>
-            <p>„Vielen Dank für Ihr Feedback. Es freut uns sehr, dass Sie zufrieden waren. Bis zum nächsten Mal.“</p>
-          </div>
-
-          <div class="quote">
-            <div class="meta">
-              <strong>Beispiel-Antwort (kritisch)</strong>
-              <span class="pill" style="border-color: rgba(245,158,11,0.35); background: rgba(245,158,11,0.10);">lösungsorientiert</span>
-            </div>
-            <p>„Danke für Ihre Rückmeldung. Das entspricht nicht unserem Anspruch. Bitte melden Sie sich kurz, damit wir das klären und eine Lösung finden.“</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="dashboard" class="section section-muted">
-      <div class="container">
-        <div class="section-head">
-          <div class="copy">
-            <h2>Profil-Score: in 30 Sekunden ein Gefühl für das Potenzial</h2>
-            <p>
-              Eine schnelle, heuristische Einschätzung anhand typischer Signale (Bewertungen, Antworten, Aktualität, Vollständigkeit).
-              Keine „Google-Ranking“-Aussage, sondern ein praktischer Kompass.
-            </p>
+          <div class="section-head-cta">
+            <a class="btn btn-ghost" href="tel:+490000000000">Anrufen</a>
+            <a class="btn btn-primary" href="#check">Kostenloser Check</a>
           </div>
         </div>
 
@@ -341,7 +417,7 @@
 
             <div class="range">
               <div class="top">
-                <label for="in_response">Antwortquote auf Reviews</label>
+                <label for="in_response">Antwortquote</label>
                 <span class="val"><span id="v_response">60</span>%</span>
               </div>
               <input id="in_response" type="range" min="0" max="100" value="60" />
@@ -354,7 +430,7 @@
                 <span class="val"><span id="v_recency">6</span> Wochen</span>
               </div>
               <input id="in_recency" type="range" min="0" max="52" value="6" />
-              <p class="microcopy">Je frischer, desto besserer Eindruck.</p>
+              <p class="microcopy">Je frischer, desto „lebendiger“ wirkt das Profil.</p>
             </div>
 
             <div class="range">
@@ -363,7 +439,14 @@
                 <span class="val"><span id="v_complete">70</span>/100</span>
               </div>
               <input id="in_complete" type="range" min="0" max="100" value="70" />
-              <p class="microcopy">Fotos, Leistungen, Kategorien, Öffnungszeiten, Beiträge.</p>
+              <p class="microcopy">Leistungen, Kategorien, Öffnungszeiten, Fotos, Inhalte.</p>
+            </div>
+
+            <div class="badges" aria-label="Im kostenlosen Check prüfen wir zusätzlich">
+              <span class="mini"><strong>Q&amp;A</strong> Struktur</span>
+              <span class="mini"><strong>Wettbewerb</strong> Kurzvergleich</span>
+              <span class="mini"><strong>Review-Flow</strong> Machbarkeit</span>
+              <span class="mini"><strong>Reibung</strong> in Kontaktwegen</span>
             </div>
           </div>
 
@@ -373,224 +456,176 @@
             <div class="score" aria-live="polite">
               <svg class="donut" viewBox="0 0 120 120" role="img" aria-label="Profil-Score Donut">
                 <circle cx="60" cy="60" r="46" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="14"/>
-                <circle id="seg_trust" cx="60" cy="60" r="46" fill="none" stroke="#4f7cff" stroke-width="14" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-                <circle id="seg_act" cx="60" cy="60" r="46" fill="none" stroke="#22c55e" stroke-width="14" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-                <circle id="seg_prof" cx="60" cy="60" r="46" fill="none" stroke="#f59e0b" stroke-width="14" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+                <circle id="seg_trust" cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+                <circle id="seg_act" cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+                <circle id="seg_prof" cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" transform="rotate(-90 60 60)"/>
                 <text x="60" y="64" text-anchor="middle" font-size="22" font-weight="900" fill="#eaf0ff" id="out_score">72</text>
               </svg>
 
               <div>
                 <div class="big"><span id="out_score_big">72</span><small>/100</small></div>
-                <div class="desc" id="out_desc">Solider Eindruck. Mit mehr Antworten und regelmäßiger Aktivität ist schnell mehr drin.</div>
+                <div class="desc" id="out_desc">Solider Eindruck. Mit mehr Kontinuität ist schnell mehr drin.</div>
               </div>
             </div>
 
             <div class="legend">
-              <div class="item"><span>Vertrauen (Sterne + Menge)</span><strong id="out_trust">0</strong></div>
-              <div class="item"><span>Aktivität (Antworten + Frische)</span><strong id="out_act">0</strong></div>
-              <div class="item"><span>Profil (Vollständigkeit)</span><strong id="out_prof">0</strong></div>
+              <div class="item"><span>Vertrauen</span><strong id="out_trust">0</strong></div>
+              <div class="item"><span>Aktivität</span><strong id="out_act">0</strong></div>
+              <div class="item"><span>Profil</span><strong id="out_prof">0</strong></div>
             </div>
 
             <div class="todo">
               <strong>Nächste Schritte (automatisch)</strong>
               <ul id="out_todos"></ul>
               <p class="microcopy" style="margin-top:10px;">
-                Tipp: Wenn Sie möchten, mache ich daraus einen umsetzbaren Monatsplan (inkl. Textvorlagen).
+                Wenn Sie wollen, setze ich das als Monatsroutine für Sie um. Kurz anrufen oder kostenlosen Check anfordern.
               </p>
-              <a class="btn btn-primary" href="#check" style="margin-top:10px;">Kostenlosen Profil-Check anfordern</a>
+              <div class="btn-row">
+                <a class="btn btn-primary" href="#check">Kostenloser Check</a>
+                <a class="btn btn-ghost" href="tel:+490000000000">Anrufen</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="pakete" class="section">
+    <!-- FAQ -->
+    <section class="section section-muted" id="faq">
       <div class="container">
         <div class="section-head">
-          <div class="copy">
-            <h2>Pakete, die im Alltag funktionieren</h2>
-            <p>Sie starten klein und können jederzeit anpassen. Preise sind Platzhalter und frei anpassbar.</p>
-          </div>
-        </div>
-
-        <div class="pricing">
-          <article class="price-card">
-            <h3>Starter</h3>
-            <p class="price-sub">Ordnung und Routine</p>
-
-            <p class="price">
-              <span class="price-amount">149&nbsp;€</span>
-              <span class="price-term">/ Monat</span>
-              <span class="price-note">je Standort</span>
-            </p>
-
-            <ul class="price-list">
-              <li><strong>Bewertungen:</strong> Antworten bis <strong>15</strong> / Monat</li>
-              <li><strong>Updates:</strong> <strong>1</strong> Update / Monat</li>
-              <li><strong>Profil-Basics:</strong> Öffnungszeiten, Feiertage, Basisdaten</li>
-              <li><strong>Setup (einmalig):</strong> Terminlink/Website prüfen, Bewertungslink + QR</li>
-              <li><strong>Antwort-Ziel:</strong> innerhalb von <strong>72&nbsp;h</strong> (Mo–Fr)</li>
-              <li><strong>Report:</strong> Kurz-Status <strong>quartalsweise</strong> (1 Seite)</li>
-            </ul>
-
-            <a class="btn btn-ghost btn-block" href="#check">3-Punkte-Check</a>
-          </article>
-
-          <article class="price-card price-featured">
-            <div class="tag">Beliebt</div>
-            <h3>Plus</h3>
-            <p class="price-sub">Mehr Aktivität, stärkerer Eindruck</p>
-
-            <p class="price">
-              <span class="price-amount">249&nbsp;€</span>
-              <span class="price-term">/ Monat</span>
-              <span class="price-note">je Standort</span>
-            </p>
-
-            <ul class="price-list">
-              <li><strong>Bewertungen:</strong> Antworten bis <strong>40</strong> / Monat</li>
-              <li><strong>Updates:</strong> <strong>2</strong> Updates / Monat (inkl. Bild + CTA)</li>
-              <li><strong>Profil-Pflege:</strong> Leistungen, Kategorien, Fotos (kleine Korrekturen)</li>
-              <li><strong>Q&amp;A:</strong> bis <strong>2</strong> Fragen / Monat ergänzen (Abläufe klären)</li>
-              <li><strong>Antwort-Ziel:</strong> innerhalb von <strong>48&nbsp;h</strong> (Mo–Fr)</li>
-              <li><strong>Report:</strong> <strong>monatlich</strong> (1 Seite) + Top-3 Prioritäten</li>
-            </ul>
-
-            <a class="btn btn-primary btn-block" href="#check">3-Punkte-Check</a>
-          </article>
-
-          <article class="price-card">
-            <h3>Premium</h3>
-            <p class="price-sub">Konsequent sichtbar bleiben</p>
-
-            <p class="price">
-              <span class="price-amount">349&nbsp;€</span>
-              <span class="price-term">/ Monat</span>
-              <span class="price-note">je Standort</span>
-            </p>
-
-            <ul class="price-list">
-              <li><strong>Bewertungen:</strong> Antworten bis <strong>80</strong> / Monat</li>
-              <li><strong>Updates:</strong> <strong>3</strong> Updates / Monat (auch als Mini-Kampagne/Serie)</li>
-              <li><strong>Profil-Optimierung:</strong> laufende Feinschliffe (Fotos, Leistungen, Attribute)</li>
-              <li><strong>Q&amp;A:</strong> bis <strong>6</strong> Fragen / Monat + Pflege bestehender Inhalte</li>
-              <li><strong>Antwort-Ziel:</strong> innerhalb von <strong>24&nbsp;h</strong> (Mo–Fr)</li>
-              <li><strong>Extra:</strong> Wettbewerbs-Snapshot (Top 3) <strong>quartalsweise</strong> + optional 15-Minuten Review-Call</li>
-            </ul>
-
-            <a class="btn btn-ghost btn-block" href="#check">3-Punkte-Check</a>
-          </article>
-        </div>
-
-
-        <div class="callout" style="margin-top:14px;">
-          <strong>Sauber & regelkonform:</strong> Keine Incentives für Bewertungen, keine Manipulation. Fokus auf echte Kundenerfahrung.
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section section-muted">
-      <div class="container">
-        <div class="section-head">
-          <div class="copy">
+          <div>
             <h2>FAQ</h2>
-            <p>Kurz beantwortet, damit es klar bleibt.</p>
+            <p class="muted">Einwände kurz geklärt, damit es einfach bleibt.</p>
           </div>
         </div>
 
         <div class="faq">
           <details>
-            <summary>Brauche ich dafür Zugang zu meinem Google-Unternehmensprofil?</summary>
-            <p>Ja, ich werde als Manager hinzugefügt. Sie behalten jederzeit die Kontrolle und können den Zugriff jederzeit entfernen.</p>
+            <summary>Brauchen Sie Zugang zu meinem Unternehmensprofil?</summary>
+            <p class="muted">
+              Ja, für echte Pflege ist ein Manager-Zugriff üblich. Sie behalten jederzeit die Kontrolle und können den Zugriff jederzeit entziehen.
+            </p>
           </details>
 
           <details>
-            <summary>Geben Sie Antworten ohne Rücksprache frei?</summary>
-            <p>Nur wenn Sie das möchten. Auf Wunsch läuft alles über Freigabe, bevor etwas veröffentlicht wird.</p>
+            <summary>Veröffentlichen Sie Antworten ohne Rücksprache?</summary>
+            <p class="muted">
+              Optional. Wenn Sie Freigabe wünschen, bekommen Sie Vorschläge vorab und geben diese frei, erst dann wird veröffentlicht.
+            </p>
           </details>
 
           <details>
             <summary>Wie gehen Sie mit kritischen Bewertungen um?</summary>
-            <p>Ruhig, lösungsorientiert, ohne Diskussion. Ziel ist Vertrauen, nicht Streit.</p>
+            <p class="muted">
+              Ruhig, lösungsorientiert, ohne Diskussion. Ziel: Deeskalation und klare Einladung zur Klärung im direkten Kontakt.
+            </p>
           </details>
 
           <details>
-            <summary>Kann man Bewertungen „einfach mehr machen“?</summary>
-            <p>Man kann es deutlich erleichtern: Bewertungslink, QR-Code, freundliche Vorlagen. Ohne Druck und ohne Incentives.</p>
+            <summary>„Mehr Bewertungen“: ist das überhaupt sauber möglich?</summary>
+            <p class="muted">
+              Ja, über einen einfachen Prozess nach Leistung/Termin (Link/QR, kurze Vorlage). Ohne Druck und ohne Incentives.
+            </p>
           </details>
 
           <details>
             <summary>Ist der Profil-Score ein Ranking-Faktor?</summary>
-            <p>Nein. Das ist eine heuristische Orientierung. Für echte Wirkung zählt die Kombination aus Profilqualität und Kundenerlebnis.</p>
+            <p class="muted">
+              Nein. Das ist eine heuristische Orientierung, um Potenzial greifbar zu machen. Wirkung entsteht durch Routine und Kundenerlebnis.
+            </p>
           </details>
         </div>
       </div>
     </section>
 
-    <section id="check" class="section">
+    <!-- FINAL CTA / FORM -->
+    <section class="section" id="check">
       <div class="container">
         <div class="section-head">
-          <div class="copy">
-            <h2>Kostenlosen Profil-Check anfordern</h2>
-            <p>Sie bekommen eine kurze, konkrete Auswertung per E-Mail. Ohne Telefonpflicht.</p>
+          <div>
+            <h2>Kostenloser Check: 2 Minuten, klare Rückmeldung</h2>
+            <p class="muted">
+              Sie bekommen eine kurze, konkrete Einschätzung (Reibungspunkte + Quick Wins). Wenn es passt, machen wir daraus ein Abo.
+            </p>
+          </div>
+          <div class="section-head-cta">
+            <a class="btn btn-phone" href="tel:+490000000000" aria-label="Jetzt anrufen">☎ +49 0000 000000</a>
           </div>
         </div>
 
         <div class="form-grid">
-          <form id="check-form" class="form-card" action="https://formspree.io/f/xjgbzbgd" method="POST">
-            <input type="hidden" name="_subject" value="3-Punkte-Check Anfrage" />
+          <form id="lead-form" class="form-card" action="https://formspree.io/f/DEIN_FORM_ID" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Kostenloser Check (ProfilWerk)" />
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
+            <div class="grid-2">
+              <label>
+                Name
+                <input name="name" type="text" autocomplete="name" required />
+              </label>
+
+              <label>
+                Unternehmen
+                <input name="company" type="text" autocomplete="organization" required />
+              </label>
+            </div>
+
+            <div class="grid-2">
+              <label>
+                Telefon (für Rückruf, empfohlen)
+                <input name="phone" type="tel" autocomplete="tel" placeholder="+49 …" />
+              </label>
+
+              <label>
+                E-Mail
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+            </div>
+
             <label>
-              Unternehmensname
-              <input name="company" type="text" autocomplete="organization" required />
+              Link zum Unternehmensprofil (oder Website)
+              <input name="profile_url" type="url" placeholder="https://…" required />
             </label>
 
             <label>
-              Link zum Google-Profil
-              <input name="gbp" type="url" placeholder="https://www.google.com/maps?cid=1234567890123456789" required />
+              Kurz: Was ist aktuell das größte Problem? (optional)
+              <textarea name="note" rows="4" placeholder="z.B. viele kritische Reviews, keine Zeit zum Antworten, Profil wirkt leer, mehrere Standorte …"></textarea>
             </label>
 
-            <label>
-              Ort
-              <input name="city" type="text" autocomplete="address-level2" required />
+            <label class="consent">
+              <input type="checkbox" name="consent" required />
+              <span>
+                Ich willige ein, dass ProfilWerk mich zur Bearbeitung meiner Anfrage per Telefon oder E-Mail kontaktieren darf.
+                Mehr dazu im <a href="datenschutz.html">Datenschutz</a>.
+              </span>
             </label>
 
-            <label>
-              E-Mail
-              <input name="email" type="email" autocomplete="email" required />
-            </label>
-
-            <label>
-              Kurzer Hinweis (optional)
-              <textarea name="note" rows="4" placeholder="z.B. Branche, mehrere Standorte, worauf Sie Wert legen"></textarea>
-            </label>
-
-            <button class="btn btn-primary" type="submit">Check anfordern</button>
-            <p class="microcopy" id="form-status">
-                Durch Klick wird Ihre Anfrage gesendet. Sie erhalten die Auswertung per E-Mail.
+            <button class="btn btn-primary btn-block" type="submit">Check anfordern</button>
+            <p class="microcopy" id="form-status" role="status" aria-live="polite">
+              Hinweis: Wenn Sie lieber sofort sprechen möchten: <a href="tel:+490000000000">+49 0000 000000</a>.
             </p>
-
           </form>
 
           <aside class="side-card">
-            <img src="assets/gbp-illustration.jpeg" alt="Illustration: Google-Profilpflege" width="800" height="533" loading="lazy" />
-            <h3>Freigabe möglich</h3>
-            <p>
-              Wenn Sie möchten, sehen Sie Antworten und Posts vorab. Sie geben sie frei, erst dann gehen sie live.
+            <div class="img-placeholder">
+              [BILD-ID: phone-call | Prompt: Fotorealistisches Foto einer professionellen Beratungssituation am Telefon, Notizen auf Papier, Laptop im Hintergrund, seriös, neutral, keine Logos, keine Text-Overlays, weiches Licht, 4:3, high detail]
+            </div>
+            <h3>Was Sie im Check bekommen</h3>
+            <ul class="checklist">
+              <li>3–7 konkrete Quick Wins (Priorität + Aufwand)</li>
+              <li>Risikopunkte in Bewertungen/Antworten (Ton, Reibung, Eskalation)</li>
+              <li>Mini-Routine-Vorschlag (was wann, wer, wie)</li>
+            </ul>
+            <p class="microcopy">
+              Danach ist es einfach: selbst umsetzen oder als Abo abgeben.
             </p>
           </aside>
         </div>
 
-        <div class="card" style="margin-top:14px;">
-          <h3>Quellen (Auszug)</h3>
-          <p class="microcopy" style="margin-top:8px;">
-            <a href="https://www.brightlocal.com/research/local-consumer-review-survey-2024/" target="_blank" rel="noopener">BrightLocal: Local Consumer Review Survey 2024</a><br/>
-            <a href="https://www.hbs.edu/ris/Publication%20Files/12-016_a7e4a5a2-03f9-490d-b093-8f951238dba2.pdf" target="_blank" rel="noopener">Luca (HBS): Reviews, Reputation, and Revenue (2011)</a><br/>
-            <a href="https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/local-search-conversion-statistics/" target="_blank" rel="noopener">Think with Google: Local Search Conversion Statistics</a><br/>
-            <a href="https://support.google.com/business/answer/3474050?hl=en" target="_blank" rel="noopener">Google Business Profile Help: Reviews verwalten / antworten</a>
-          </p>
-        </div>
+        <p class="microcopy" style="margin-top:14px;">
+          Hinweis: Diese Website ist nicht mit Google verbunden. „Google“ ist eine Marke von Google LLC.
+        </p>
       </div>
     </section>
   </main>
@@ -598,12 +633,15 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <p class="footer-brand">Profilpflege</p>
-        <p class="footer-small">E-Mail: <a href="mailto:info@profilpflege.de">info@profilpflege.de</a></p>
-        <p class="disclaimer">
-          Hinweis: Diese Website ist nicht mit Google verbunden. „Google“ ist eine Marke von Google LLC.
-          Alle Zahlen in den KPI-Kacheln stammen aus den verlinkten Quellen. Der Profil-Score ist eine heuristische Orientierung.
+        <p class="footer-brand">ProfilWerk</p>
+        <p class="footer-small">
+          Telefon: <a href="tel:+490000000000">+49 0000 000000</a> ·
+          E-Mail: <a href="mailto:info@DEINE-DOMAIN.DE">info@DEINE-DOMAIN.DE</a>
         </p>
+        <p class="disclaimer">
+          Hinweis: Keine Rechtsberatung. Zahlen im Abschnitt „Zahlen & Wirkung“ sind Studien-/Auswertungs-Ergebnisse und keine Garantie.
+        </p>
+        <p class="footer-small">© <span id="year">2025</span> ProfilWerk</p>
       </div>
 
       <nav class="footer-nav" aria-label="Footer">
@@ -613,6 +651,11 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <div class="mobile-bar" role="region" aria-label="Schnellaktionen">
+    <a class="btn btn-primary" href="#check">Kostenloser Check</a>
+    <a class="btn btn-phone" href="tel:+490000000000" aria-label="Jetzt anrufen">Anrufen</a>
+  </div>
+
+  <script src="main.js" defer></script>
 </body>
 </html>

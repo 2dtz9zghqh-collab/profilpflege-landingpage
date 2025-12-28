@@ -3,47 +3,113 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Datenschutz | Profilpflege</title>
+  <title>Datenschutz | ProfilWerk</title>
   <link rel="icon" href="assets/favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#main">Zum Inhalt</a>
+
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index_new.html" aria-label="Startseite">
-        <img src="assets/logo.svg" alt="Profilpflege" width="180" height="36" />
+      <a class="brand" href="index.html#top" aria-label="Startseite">
+        <img src="assets/logo.svg" alt="ProfilWerk" width="220" height="56" />
       </a>
-      <nav class="site-nav" aria-label="Navigation">
-        <a href="index_new.html#check">Kostenloser Check</a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Navigation">
+        <a href="index.html#check">Kostenloser Check</a>
+        <a href="index.html#pakete">Pakete</a>
+        <a href="index.html#faq">FAQ</a>
       </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-phone" href="tel:+490000000000" aria-label="Jetzt anrufen">☎ +49 0000 000000</a>
+        <a class="btn btn-primary" href="index.html#check">Kostenloser Check</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">Menü</button>
+      </div>
     </div>
   </header>
 
-  <main class="section">
+  <main id="main" class="section">
     <div class="container">
       <div class="section-head">
-        <div class="copy">
+        <div>
           <h2>Datenschutz</h2>
-          <p>Platzhalter. Bitte später mit einer passenden Datenschutzerklärung ersetzen.</p>
+          <p class="muted">
+            Vorlage mit Platzhaltern. Bitte mit einer zu Ihrem Setup passenden Datenschutzerklärung ersetzen. Keine Rechtsberatung.
+          </p>
         </div>
       </div>
 
       <div class="card">
-        <p>
-          Wir verarbeiten personenbezogene Daten (z. B. Name, E-Mail, Nachricht), wenn Sie uns per E-Mail kontaktieren.
-          Zweck ist die Bearbeitung Ihrer Anfrage.
+        <h3>1. Verantwortlicher</h3>
+        <p class="muted">
+          Verantwortlicher im Sinne der DSGVO:<br/>
+          <strong>[Unternehmensname / Inhaber]</strong><br/>
+          [Straße Hausnummer], [PLZ Ort], Deutschland<br/>
+          E-Mail: <a href="mailto:info@DEINE-DOMAIN.DE">[info@…]</a><br/>
+          Telefon: <a href="tel:+490000000000">[+49 …]</a>
         </p>
-        <p>
-          Empfänger: keine Weitergabe ohne Anlass, ggf. Hosting-Dienstleister für den Betrieb der Website.
+
+        <h3 style="margin-top:18px;">2. Zweck der Verarbeitung</h3>
+        <p class="muted">
+          Wir verarbeiten personenbezogene Daten, wenn Sie uns kontaktieren (z.B. über das Kontaktformular oder per E-Mail/Telefon).
+          Zweck ist die Bearbeitung Ihrer Anfrage und die Kommunikation mit Ihnen.
         </p>
-        <p>
-          Speicherdauer: solange erforderlich zur Bearbeitung und im Rahmen gesetzlicher Pflichten.
+
+        <h3 style="margin-top:18px;">3. Welche Daten</h3>
+        <p class="muted">
+          Je nach Anfrage verarbeiten wir z.B.: Name, Unternehmensname, E-Mail, Telefonnummer, Profil-/Website-Link sowie Ihre Nachricht.
         </p>
-        <p>
-          Rechte: Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch, Datenübertragbarkeit.
+
+        <h3 style="margin-top:18px;">4. Rechtsgrundlagen</h3>
+        <p class="muted">
+          Die Verarbeitung erfolgt je nach Kontext auf Basis von Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen/Vertrag),
+          Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an effizienter Kommunikation) oder Art. 6 Abs. 1 lit. a DSGVO (Einwilligung),
+          soweit diese eingeholt wurde.
         </p>
-        <p>
-          Kontakt: <a href="mailto:info@profilpflege.de">info@profilpflege.de</a>
+
+        <h3 style="margin-top:18px;">5. Empfänger / Auftragsverarbeitung</h3>
+        <p class="muted">
+          Für den Betrieb dieser Website kann ein Hosting-Dienstleister eingesetzt werden (Auftragsverarbeitung).
+          Eine Weitergabe an Dritte erfolgt nur, wenn dies zur Bearbeitung erforderlich ist oder eine rechtliche Pflicht besteht.
+        </p>
+
+        <h3 style="margin-top:18px;">6. Kontaktformular</h3>
+        <p class="muted">
+          Wenn Sie das Kontaktformular nutzen, werden die von Ihnen eingegebenen Daten zur Bearbeitung der Anfrage verarbeitet.
+          (Hinweis: In dieser Vorlage wird Formspree als technischer Versanddienst genutzt. Falls Sie etwas anderes nutzen: Abschnitt anpassen.)
+        </p>
+
+        <h3 style="margin-top:18px;">7. Speicherdauer</h3>
+        <p class="muted">
+          Wir speichern Daten nur so lange, wie es für die Bearbeitung der Anfrage erforderlich ist sowie im Rahmen gesetzlicher Aufbewahrungspflichten.
+        </p>
+
+        <h3 style="margin-top:18px;">8. Ihre Rechte</h3>
+        <p class="muted">
+          Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch.
+          Außerdem können Sie eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.
+        </p>
+
+        <h3 style="margin-top:18px;">9. Beschwerderecht</h3>
+        <p class="muted">
+          Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.
+          Zuständig ist in der Regel die Aufsichtsbehörde Ihres gewöhnlichen Aufenthaltsorts oder des Sitzes des Verantwortlichen.
+        </p>
+
+        <h3 style="margin-top:18px;">10. Cookies / Tracking</h3>
+        <p class="muted">
+          In dieser Landingpage sind keine Analyse- oder Werbetracker vorgesehen (bitte prüfen, ob Sie zusätzlich Dienste eingebunden haben).
+        </p>
+
+        <h3 style="margin-top:18px;">11. Sicherheit</h3>
+        <p class="muted">
+          Wir treffen angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer Daten.
+        </p>
+
+        <p class="microcopy" style="margin-top:14px;">
+          Hinweis: Diese Website ist nicht mit Google verbunden. „Google“ ist eine Marke von Google LLC.
         </p>
       </div>
 
@@ -54,7 +120,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <p class="footer-brand">Profilpflege</p>
+        <p class="footer-brand">ProfilWerk</p>
         <p class="footer-small"><a href="index.html">Zur Startseite</a></p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
@@ -62,5 +128,7 @@
       </nav>
     </div>
   </footer>
+
+  <script src="main.js" defer></script>
 </body>
 </html>

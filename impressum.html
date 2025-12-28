@@ -3,40 +3,76 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Impressum | Profilpflege</title>
+  <title>Impressum | ProfilWerk</title>
   <link rel="icon" href="assets/favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#main">Zum Inhalt</a>
+
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index_new.html" aria-label="Startseite">
-        <img src="assets/logo.svg" alt="Profilpflege" width="180" height="36" />
+      <a class="brand" href="index.html#top" aria-label="Startseite">
+        <img src="assets/logo.svg" alt="ProfilWerk" width="220" height="56" />
       </a>
-      <nav class="site-nav" aria-label="Navigation">
-        <a href="index_new.html#check">Kostenloser Check</a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Navigation">
+        <a href="index.html#check">Kostenloser Check</a>
+        <a href="index.html#pakete">Pakete</a>
+        <a href="index.html#faq">FAQ</a>
       </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-phone" href="tel:+490000000000" aria-label="Jetzt anrufen">☎ +49 0000 000000</a>
+        <a class="btn btn-primary" href="index.html#check">Kostenloser Check</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">Menü</button>
+      </div>
     </div>
   </header>
 
-  <main class="section">
+  <main id="main" class="section">
     <div class="container">
       <div class="section-head">
-        <div class="copy">
+        <div>
           <h2>Impressum</h2>
-          <p>Platzhalter. Bitte mit Ihren Unternehmensdaten ersetzen.</p>
+          <p class="muted">Vorlage mit Platzhaltern. Bitte mit Ihren Daten ersetzen. Keine Rechtsberatung.</p>
         </div>
       </div>
 
       <div class="card">
-        <p><strong>Profilpflege</strong></p>
-        <p>Adresse: Musterstraße 1, 12345 Musterstadt</p>
-        <p>E-Mail: <a href="mailto:info@profilpflege.de">info@profilpflege.de</a></p>
-        <p>Telefon: +49 000 000000</p>
+        <h3>Anbieter</h3>
+        <p class="muted">
+          <strong>[Unternehmensname / Inhaber]</strong><br/>
+          [Straße Hausnummer]<br/>
+          [PLZ Ort]<br/>
+          Deutschland
+        </p>
 
-        <p style="margin-top:14px;"><strong>Hinweise</strong></p>
-        <p>
-          Diese Website ist nicht mit Google verbunden. „Google“ ist eine Marke von Google LLC.
+        <h3 style="margin-top:18px;">Kontakt</h3>
+        <p class="muted">
+          Telefon: <a href="tel:+490000000000">[+49 …]</a><br/>
+          E-Mail: <a href="mailto:info@DEINE-DOMAIN.DE">[info@…]</a>
+        </p>
+
+        <h3 style="margin-top:18px;">Umsatzsteuer</h3>
+        <p class="muted">
+          Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: <strong>[USt-IdNr.]</strong><br/>
+          (Falls nicht vorhanden: Feld entfernen.)
+        </p>
+
+        <h3 style="margin-top:18px;">Verantwortlich für Inhalte</h3>
+        <p class="muted">
+          Verantwortlich i.S.d. § 18 Abs. 2 MStV: <strong>[Name, Anschrift wie oben]</strong>
+        </p>
+
+        <h3 style="margin-top:18px;">Haftungshinweise</h3>
+        <p class="muted">
+          Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.
+          Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+        </p>
+
+        <p class="microcopy" style="margin-top:14px;">
+          Hinweis: Diese Website ist nicht mit Google verbunden. „Google“ ist eine Marke von Google LLC.
         </p>
       </div>
 
@@ -47,7 +83,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <p class="footer-brand">Profilpflege</p>
+        <p class="footer-brand">ProfilWerk</p>
         <p class="footer-small"><a href="index.html">Zur Startseite</a></p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
@@ -55,5 +91,7 @@
       </nav>
     </div>
   </footer>
+
+  <script src="main.js" defer></script>
 </body>
 </html>
