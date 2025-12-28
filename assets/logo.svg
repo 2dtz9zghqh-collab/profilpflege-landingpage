@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="222.94002mm"
+   height="222.94002mm"
+   viewBox="0 0 222.94002 222.94002"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="profilWerk_google_profile_schwarz_64px.svg"
+   inkscape:version="1.4.3 (0d15f750, 2025-12-25)"
+   inkscape:export-filename="Logo/profilWerk_google_profile_schwarz_64px.svg"
+   inkscape:export-xdpi="7.291647"
+   inkscape:export-ydpi="7.291647"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#000000"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.147304"
+     inkscape:cx="383.94358"
+     inkscape:cy="306.37041"
+     inkscape:window-width="2560"
+     inkscape:window-height="1440"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1"
+     inkscape:export-bgcolor="#000000ff">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="222.94002"
+       height="222.94002"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(5.8137519,-20.407555)"
+     style="fill:#fdfdfd;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-width:1;stroke-dasharray:none">
+    <ellipse
+       style="fill:#010101;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:134.4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path1"
+       cx="105.31033"
+       cy="108.65487"
+       rx="57.746918"
+       ry="56.307034" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:46.9854px;font-family:Rubik;-inkscape-font-specification:'Rubik, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:1;fill:#fdfdfd;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:134.4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       x="-0.27491367"
+       y="213.9702"
+       id="text2"
+       transform="scale(1.0108123,0.98930336)"><tspan
+         id="tspan2"
+         style="stroke-width:1;fill:#fdfdfd;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-dasharray:none"
+         x="-0.27491367"
+         y="213.9702">ProfilWerk</tspan></text>
+    <path
+       id="text11"
+       style="font-size:80.8029px;font-family:'System Font';-inkscape-font-specification:'System Font, @opsz=96,wght=270';font-variation-settings:'opsz' 96, 'wght' 270;display:inline;stroke:#ffffff;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4.6;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;fill:#fdfdfd;fill-opacity:1"
+       d="M 60.33256,141.08106 V 75.596563 h 5.250105 l 18.189072,57.815127 h 0.20323 L 102.16404,75.596563 h 5.21623 v 65.484497 h -4.26784 V 87.077906 h -2.16777 l 5.11461,-10.074538 -20.187492,64.077692 h -3.996853 l -20.221371,-64.077692 5.14849,10.074538 h -2.167786 v 54.003154 z m 51.90415,-0.40469 V 75.446803 h 4.68668 v 29.066257 h 29.4046 V 75.446803 h 4.65195 v 65.229567 h -4.65195 v -30.69361 h -29.4046 v 30.69361 z" />
+  </g>
+</svg>
