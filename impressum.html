@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Impressum | ProfilWerk</title>
+  <meta name="description" content="Impressum von ProfilWerk (Vorlage mit Platzhaltern). Bitte mit Ihren Unternehmensdaten ersetzen." />
   <link rel="icon" href="assets/favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -18,12 +19,12 @@
 
       <nav id="site-nav" class="site-nav" aria-label="Navigation">
         <a href="index.html#check">Kostenloser Check</a>
-        <a href="index.html#pakete">Pakete</a>
+        <a href="index.html#abo">Abo</a>
         <a href="index.html#faq">FAQ</a>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-phone" href="tel:+490000000000" aria-label="Jetzt anrufen">☎ +49 0000 000000</a>
+        <a class="btn btn-phone" data-phone-tel href="tel:+490000000000" aria-label="Jetzt anrufen">☎ <span data-phone-text>+49 0000 000000</span></a>
         <a class="btn btn-primary" href="index.html#check">Kostenloser Check</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">Menü</button>
       </div>
@@ -34,7 +35,7 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <h2>Impressum</h2>
+          <h1>Impressum</h1>
           <p class="muted">Vorlage mit Platzhaltern. Bitte mit Ihren Daten ersetzen. Keine Rechtsberatung.</p>
         </div>
       </div>
@@ -50,19 +51,25 @@
 
         <h3 style="margin-top:18px;">Kontakt</h3>
         <p class="muted">
-          Telefon: <a href="tel:+490000000000">[+49 …]</a><br/>
+          Telefon: <a data-phone-tel href="tel:+490000000000">[+49 …]</a><br/>
           E-Mail: <a href="mailto:info@DEINE-DOMAIN.DE">[info@…]</a>
         </p>
 
         <h3 style="margin-top:18px;">Umsatzsteuer</h3>
         <p class="muted">
           Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: <strong>[USt-IdNr.]</strong><br/>
-          (Falls nicht vorhanden: Feld entfernen.)
+          Falls nicht vorhanden: Feld entfernen.
         </p>
 
         <h3 style="margin-top:18px;">Verantwortlich für Inhalte</h3>
         <p class="muted">
           Verantwortlich i.S.d. § 18 Abs. 2 MStV: <strong>[Name, Anschrift wie oben]</strong>
+        </p>
+
+        <h3 style="margin-top:18px;">Hosting</h3>
+        <p class="muted">
+          Hosting-Dienstleister: <strong>[Name, Anschrift / Land]</strong><br/>
+          (Optional) Datenschutzkontakt Hosting: <strong>[E-Mail/URL]</strong>
         </p>
 
         <h3 style="margin-top:18px;">Haftungshinweise</h3>

@@ -1,5 +1,15 @@
 (function () {
+  // Zentral anpassen
   const PHONE_TEL = "tel:+490000000000";
+  const PHONE_TEXT = "+49 0000 000000";
+
+  // Inject phone placeholders (optional helper)
+  document.querySelectorAll("[data-phone-tel]").forEach((el) => {
+    el.setAttribute("href", PHONE_TEL);
+  });
+  document.querySelectorAll("[data-phone-text]").forEach((el) => {
+    el.textContent = PHONE_TEXT;
+  });
 
   // Header compact on scroll
   const header = document.getElementById("site-header");
@@ -22,12 +32,16 @@
     if (!toggle || !nav) return;
     nav.classList.remove("open");
     toggle.setAttribute("aria-expanded", "false");
+    toggle.textContent = "Menü";
+    document.body.classList.remove("nav-open");
   }
 
   function openNav() {
     if (!toggle || !nav) return;
     nav.classList.add("open");
     toggle.setAttribute("aria-expanded", "true");
+    toggle.textContent = "Schließen";
+    document.body.classList.add("nav-open");
     const firstLink = nav.querySelector("a");
     if (firstLink) firstLink.focus();
   }
@@ -56,6 +70,11 @@
       if (target === toggle) return;
       if (nav.contains(target)) return;
       closeNav();
+    });
+
+    window.addEventListener("resize", () => {
+      // If breakpoint flips, ensure nav is closed
+      if (window.innerWidth > 980) closeNav();
     });
   }
 
@@ -107,7 +126,7 @@
       try {
         // Guard: action must be a real endpoint
         if (!form.action || form.action.includes("DEIN_FORM_ID")) {
-          setStatus("Formular ist noch nicht verbunden (Formspree-ID fehlt). Alternativ: bitte kurz anrufen.");
+          setStatus(`Formular ist noch nicht verbunden (Formspree-ID fehlt). Alternativ: bitte kurz anrufen unter ${PHONE_TEXT}.`);
           return;
         }
 
@@ -144,9 +163,8 @@
       }
     });
 
-    // If user is stuck, keep phone visible as fallback
     if (status && !status.textContent.trim()) {
-      setStatus(`Wenn Sie lieber sofort sprechen möchten: ${PHONE_TEL.replace("tel:", "")}`);
+      setStatus(`Wenn Sie lieber sofort sprechen möchten: ${PHONE_TEXT}`);
     }
   }
 
@@ -178,35 +196,18 @@
   const hasScoreWidget = !!(els.rating && els.reviews && els.response && els.recency && els.complete);
   if (!hasScoreWidget) return;
 
-  function clamp(n, a, b) {
-    return Math.max(a, Math.min(b, n));
-  }
+  function clamp(n, a, b) { return Math.max(a, Math.min(b, n)); }
 
   // Map input to 0..1
-  function ratingScore(r) {
-    // 3.8 is "ok", 4.7 is "sehr gut"
-    return clamp((r - 3.8) / (4.7 - 3.8), 0, 1);
-  }
-
+  function ratingScore(r) { return clamp((r - 3.8) / (4.7 - 3.8), 0, 1); }
   function volumeScore(n) {
-    // log curve: 0..200 reviews are most "visible", above it flattens
     const max = 200;
     const v = Math.log10(n + 1) / Math.log10(max + 1);
     return clamp(v, 0, 1);
   }
-
-  function responseScore(p) {
-    return clamp(p / 100, 0, 1);
-  }
-
-  function recencyScore(weeks) {
-    // decay: 0 weeks = 1, 12 weeks ~ 0.37, 24 weeks ~ 0.14
-    return clamp(Math.exp(-weeks / 12), 0, 1);
-  }
-
-  function completenessScore(p) {
-    return clamp(p / 100, 0, 1);
-  }
+  function responseScore(p) { return clamp(p / 100, 0, 1); }
+  function recencyScore(weeks) { return clamp(Math.exp(-weeks / 12), 0, 1); }
+  function completenessScore(p) { return clamp(p / 100, 0, 1); }
 
   function describe(score) {
     if (score >= 85) return "Sehr stark. Das Profil wirkt aktiv, vertrauenswürdig und komplett.";
@@ -221,7 +222,7 @@
 
     if (response < 80) t.push("Antwortquote erhöhen: auch kurze, freundliche Antworten zählen.");
     if (recency > 8) t.push("Bewertungen regelmäßiger anstoßen: einfacher Link oder QR-Code nach Termin.");
-    if (complete < 75) t.push("Profil vervollständigen: Leistungen, Kategorien, Öffnungszeiten, Fotos.");
+    if (complete < 75) t.push("Profil vervollständigen: Leistungen, Kategorien, Öffnungszeiten, Inhalte.");
     if (reviews < 20) t.push("Mehr Social Proof: ein klarer Review-Flow nach abgeschlossenen Aufträgen.");
     if (rating < 4.3) t.push("Qualitätsfeedback intern sammeln und wiederkehrende Ursachen abstellen.");
 
@@ -256,10 +257,10 @@
     apply(els.segAct, dashAct, offAct);
     apply(els.segProf, dashProf, offProf);
 
-    // simple visual differentiation without hardcoding colors
+    // Visual differentiation without introducing new accent colors
     if (els.segTrust) els.segTrust.style.opacity = "0.95";
-    if (els.segAct) els.segAct.style.opacity = "0.75";
-    if (els.segProf) els.segProf.style.opacity = "0.55";
+    if (els.segAct) els.segAct.style.opacity = "0.72";
+    if (els.segProf) els.segProf.style.opacity = "0.52";
   }
 
   function render() {

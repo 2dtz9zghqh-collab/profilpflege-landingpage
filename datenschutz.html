@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Datenschutz | ProfilWerk</title>
+  <meta name="description" content="Datenschutzhinweise von ProfilWerk (Vorlage mit Platzhaltern). Bitte an Ihr Setup anpassen." />
   <link rel="icon" href="assets/favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -18,12 +19,12 @@
 
       <nav id="site-nav" class="site-nav" aria-label="Navigation">
         <a href="index.html#check">Kostenloser Check</a>
-        <a href="index.html#pakete">Pakete</a>
+        <a href="index.html#abo">Abo</a>
         <a href="index.html#faq">FAQ</a>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-phone" href="tel:+490000000000" aria-label="Jetzt anrufen">☎ +49 0000 000000</a>
+        <a class="btn btn-phone" data-phone-tel href="tel:+490000000000" aria-label="Jetzt anrufen">☎ <span data-phone-text>+49 0000 000000</span></a>
         <a class="btn btn-primary" href="index.html#check">Kostenloser Check</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">Menü</button>
       </div>
@@ -34,7 +35,7 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <h2>Datenschutz</h2>
+          <h1>Datenschutz</h1>
           <p class="muted">
             Vorlage mit Platzhaltern. Bitte mit einer zu Ihrem Setup passenden Datenschutzerklärung ersetzen. Keine Rechtsberatung.
           </p>
@@ -48,10 +49,10 @@
           <strong>[Unternehmensname / Inhaber]</strong><br/>
           [Straße Hausnummer], [PLZ Ort], Deutschland<br/>
           E-Mail: <a href="mailto:info@DEINE-DOMAIN.DE">[info@…]</a><br/>
-          Telefon: <a href="tel:+490000000000">[+49 …]</a>
+          Telefon: <a data-phone-tel href="tel:+490000000000">[+49 …]</a>
         </p>
 
-        <h3 style="margin-top:18px;">2. Zweck der Verarbeitung</h3>
+        <h3 style="margin-top:18px;">2. Zwecke der Verarbeitung</h3>
         <p class="muted">
           Wir verarbeiten personenbezogene Daten, wenn Sie uns kontaktieren (z.B. über das Kontaktformular oder per E-Mail/Telefon).
           Zweck ist die Bearbeitung Ihrer Anfrage und die Kommunikation mit Ihnen.
@@ -69,43 +70,50 @@
           soweit diese eingeholt wurde.
         </p>
 
-        <h3 style="margin-top:18px;">5. Empfänger / Auftragsverarbeitung</h3>
+        <h3 style="margin-top:18px;">5. Hosting / Server-Logfiles</h3>
         <p class="muted">
           Für den Betrieb dieser Website kann ein Hosting-Dienstleister eingesetzt werden (Auftragsverarbeitung).
-          Eine Weitergabe an Dritte erfolgt nur, wenn dies zur Bearbeitung erforderlich ist oder eine rechtliche Pflicht besteht.
+          Beim Aufruf der Seite können technisch erforderliche Daten in Server-Logfiles verarbeitet werden (z.B. IP-Adresse, Zeitpunkt, User-Agent).
+          Hosting-Anbieter: <strong>[Name, Land]</strong>.
         </p>
 
         <h3 style="margin-top:18px;">6. Kontaktformular</h3>
         <p class="muted">
           Wenn Sie das Kontaktformular nutzen, werden die von Ihnen eingegebenen Daten zur Bearbeitung der Anfrage verarbeitet.
-          (Hinweis: In dieser Vorlage wird Formspree als technischer Versanddienst genutzt. Falls Sie etwas anderes nutzen: Abschnitt anpassen.)
+          Technischer Versanddienst (Platzhalter): <strong>Formspree</strong> (falls Sie etwas anderes nutzen, bitte anpassen).
         </p>
 
-        <h3 style="margin-top:18px;">7. Speicherdauer</h3>
+        <h3 style="margin-top:18px;">7. Empfänger / Auftragsverarbeitung</h3>
+        <p class="muted">
+          Empfänger können Dienstleister sein, die wir zur Bereitstellung der Website und Bearbeitung von Anfragen einsetzen (Auftragsverarbeiter).
+          Eine Weitergabe an Dritte erfolgt nur, wenn dies zur Bearbeitung erforderlich ist oder eine rechtliche Pflicht besteht.
+        </p>
+
+        <h3 style="margin-top:18px;">8. Speicherdauer</h3>
         <p class="muted">
           Wir speichern Daten nur so lange, wie es für die Bearbeitung der Anfrage erforderlich ist sowie im Rahmen gesetzlicher Aufbewahrungspflichten.
         </p>
 
-        <h3 style="margin-top:18px;">8. Ihre Rechte</h3>
+        <h3 style="margin-top:18px;">9. Ihre Rechte</h3>
         <p class="muted">
           Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch.
           Außerdem können Sie eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.
         </p>
 
-        <h3 style="margin-top:18px;">9. Beschwerderecht</h3>
+        <h3 style="margin-top:18px;">10. Beschwerderecht</h3>
         <p class="muted">
           Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.
           Zuständig ist in der Regel die Aufsichtsbehörde Ihres gewöhnlichen Aufenthaltsorts oder des Sitzes des Verantwortlichen.
         </p>
 
-        <h3 style="margin-top:18px;">10. Cookies / Tracking</h3>
+        <h3 style="margin-top:18px;">11. Cookies / Tracking</h3>
         <p class="muted">
           In dieser Landingpage sind keine Analyse- oder Werbetracker vorgesehen (bitte prüfen, ob Sie zusätzlich Dienste eingebunden haben).
         </p>
 
-        <h3 style="margin-top:18px;">11. Sicherheit</h3>
+        <h3 style="margin-top:18px;">12. Sicherheit</h3>
         <p class="muted">
-          Wir treffen angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer Daten.
+          Wir treffen angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer Daten (z.B. TLS/SSL, Zugriffskontrolle).
         </p>
 
         <p class="microcopy" style="margin-top:14px;">
