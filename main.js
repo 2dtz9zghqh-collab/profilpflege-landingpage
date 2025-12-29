@@ -85,21 +85,16 @@
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-
       if (!form.reportValidity()) return;
 
       const data = new FormData(form);
 
-      // Honeypot
       const gotcha = (data.get("_gotcha") || "").toString().trim();
       if (gotcha) return;
 
       const company = (data.get("company") || "").toString().trim();
-
-      // Subject
       if (company) data.set("_subject", `Kostenloser Check: ${company}`);
 
-      // UI state
       setStatus("Sende …");
       if (submitBtn) {
         submitBtn.disabled = true;
@@ -108,7 +103,6 @@
       }
 
       try {
-        // Guard: action must be a real endpoint
         if (!form.action || form.action.includes("DEIN_FORM_ID")) {
           setStatus(`Formular ist noch nicht verbunden (Formspree-ID fehlt). Alternativ: bitte anrufen unter ${PHONE_TEXT}.`);
           return;
@@ -147,4 +141,71 @@
       setStatus(`Wenn Sie lieber sofort sprechen möchten: ${PHONE_TEXT}`);
     }
   }
+
+  // Profil-Score (optional, clientseitig)
+  const scoreMeter = document.getElementById("score-meter");
+  const scoreNumber = document.getElementById("score-number");
+  const scoreBadge = document.getElementById("score-badge");
+  const scoreTips = document.getElementById("score-tips");
+
+  const fReplies = document.getElementById("score-replies");
+  const fFreshness = document.getElementById("score-freshness");
+  const fCompleteness = document.getElementById("score-completeness");
+  const fContent = document.getElementById("score-content");
+  const fFlow = document.getElementById("score-flow");
+
+  function toNum(el) {
+    if (!el) return 0;
+    const n = Number(el.value);
+    return Number.isFinite(n) ? n : 0;
+  }
+
+  function updateScore() {
+    if (!scoreMeter || !scoreNumber || !scoreBadge || !scoreTips) return;
+
+    const replies = toNum(fReplies);
+    const freshness = toNum(fFreshness);
+    const completeness = toNum(fCompleteness);
+    const content = toNum(fContent);
+    const flow = toNum(fFlow);
+
+    let score = replies + freshness + completeness + content + flow;
+    score = Math.max(0, Math.min(100, score));
+
+    scoreMeter.style.setProperty("--p", String(score));
+    scoreMeter.setAttribute("aria-valuenow", String(score));
+    scoreNumber.textContent = String(score);
+    scoreBadge.textContent = `Score: ${score}/100`;
+
+    const tips = [];
+
+    if (replies <= 10) tips.push("Antworten standardisieren: kurze, ruhige Vorlagen je Fall (Lob, neutral, Kritik).");
+    else if (replies === 20) tips.push("Antwortquote weiter erhöhen: alle Reviews beantworten, auch kurze Einzeiler.");
+
+    if (freshness <= 8) tips.push("Aktualität fixen: Öffnungszeiten, Leistungen, Kontaktwege und Attribute konsequent korrekt halten.");
+    if (completeness <= 6) tips.push("Profil vervollständigen: Kategorien, Leistungen, Attribute, kurze Service-Texte sauber pflegen.");
+    if (content <= 5) tips.push("Sichtbare Aktivität: regelmäßige, neutrale Fotos/Updates (ohne Werbedruck).");
+    if (flow === 0) tips.push("Review-Flow einführen: Link/QR nach Termin oder Kauf, freundlich und regelkonform.");
+
+    if (tips.length === 0) tips.push("Sie sind gut aufgestellt. Nächster Hebel: Konsistenz und Reaktionsgeschwindigkeit als Routine.");
+
+    scoreTips.innerHTML = "";
+    tips.forEach((t) => {
+      const li = document.createElement("li");
+      li.textContent = t;
+      scoreTips.appendChild(li);
+    });
+  }
+
+  [fReplies, fFreshness, fCompleteness, fContent, fFlow].forEach((el) => {
+    if (el) el.addEventListener("change", updateScore);
+  });
+
+  if (fReplies) fReplies.value = "20";
+  if (fFreshness) fFreshness.value = "16";
+  if (fCompleteness) fCompleteness.value = "12";
+  if (fContent) fContent.value = "5";
+  if (fFlow) fFlow.value = "6";
+  updateScore();
+
 })();

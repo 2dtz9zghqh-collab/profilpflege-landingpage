@@ -496,7 +496,8 @@ input[type="url"],
 input[type="email"],
 input[type="text"],
 input[type="tel"],
-textarea{
+textarea,
+select{
   background: rgba(255,255,255,0.92);
   border: 1px solid rgba(15,23,42,0.14);
   border-radius: 14px;
@@ -648,4 +649,106 @@ input:focus, textarea:focus{
   .header-actions .btn-phone{ display:none; }
   .hero-mini{ grid-template-columns: 1fr; }
   .grid-2{ grid-template-columns: 1fr; }
+}
+/* Profil-Score (optional) */
+.score-details{
+  margin-top: 14px;
+  border: 1px solid rgba(15,23,42,0.10);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.70);
+  padding: 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.score-details summary{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  cursor:pointer;
+  font-weight: 980;
+  list-style:none;
+}
+
+.score-details summary::-webkit-details-marker{ display:none; }
+
+.score-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(79,124,255,0.28);
+  background: rgba(79,124,255,0.10);
+  font-size: 12.5px;
+  font-weight: 980;
+  white-space: nowrap;
+}
+
+.score-grid{
+  display:grid;
+  grid-template-columns: 180px 1fr;
+  gap: 14px;
+  margin-top: 12px;
+  align-items:start;
+}
+
+.score-meter{
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  background:
+    conic-gradient(var(--accent) calc(var(--p) * 1%), rgba(15,23,42,0.14) 0);
+  padding: 10px;
+  border: 1px solid rgba(15,23,42,0.10);
+}
+
+.score-meter-inner{
+  height:100%;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(15,23,42,0.10);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+.score-number{
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 980;
+  letter-spacing: -0.03em;
+}
+
+.score-label{
+  margin-top: 6px;
+  color: var(--text-3);
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.score-controls label{
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.score-controls select{
+  width: 100%;
+}
+
+.score-output{
+  margin-top: 12px;
+  border-top: 1px solid rgba(15,23,42,0.08);
+  padding-top: 12px;
+}
+
+@media (max-width: 520px){
+  .score-grid{
+    grid-template-columns: 1fr;
+  }
+  .score-meter{
+    width: 100%;
+    height: 190px;
+  }
 }

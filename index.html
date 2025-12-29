@@ -540,7 +540,6 @@
               Hinweis: Diese Website ist nicht mit Google verbunden. „Google“ ist eine Marke von Google LLC.
             </p>
           </form>
-
           <aside class="side-card" aria-label="Was Sie bekommen">
             <img
               class="section-img"
@@ -564,6 +563,94 @@
             <div class="callout">
               <strong>Ergebnis:</strong> kurze Prioritätenliste + Quick Wins. Auf Wunsch: passende Paketempfehlung inkl. SLA.
             </div>
+
+            <details class="score-details">
+              <summary>
+                <span class="score-badge" id="score-badge">Score: 0/100</span>
+                <span>Profil-Score Vorschau (optional)</span>
+              </summary>
+
+              <p class="microcopy" style="margin-top:10px;">
+                Grobe Einschätzung anhand Ihrer Angaben. Kein automatisches Auslesen des Google-Profils.
+              </p>
+
+              <div class="score-grid">
+                <div
+                  class="score-meter"
+                  id="score-meter"
+                  role="meter"
+                  aria-label="Profil-Score"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="0"
+                  style="--p:0;"
+                >
+                  <div class="score-meter-inner">
+                    <div class="score-number" id="score-number">0</div>
+                    <div class="score-label">von 100</div>
+                  </div>
+                </div>
+
+                <div class="score-controls" aria-label="Score-Eingaben">
+                  <label>
+                    Antworten auf Bewertungen
+                    <select id="score-replies">
+                      <option value="0">Fast nie</option>
+                      <option value="10">Manchmal</option>
+                      <option value="20">Meist</option>
+                      <option value="30">Immer</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    Aktualität (Öffnungszeiten, Leistungen, Kontakt)
+                    <select id="score-freshness">
+                      <option value="0">Oft veraltet / unklar</option>
+                      <option value="8">Manchmal veraltet</option>
+                      <option value="16">Meist korrekt</option>
+                      <option value="24">Immer korrekt</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    Profil-Vollständigkeit (Kategorien, Leistungen, Attribute)
+                    <select id="score-completeness">
+                      <option value="0">Lückenhaft</option>
+                      <option value="6">Teilweise gepflegt</option>
+                      <option value="12">Weitgehend vollständig</option>
+                      <option value="18">Sehr vollständig</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    Inhalte (Fotos/Beiträge, sichtbare Aktualität)
+                    <select id="score-content">
+                      <option value="0">Kaum vorhanden</option>
+                      <option value="5">Gelegentlich</option>
+                      <option value="10">Regelmäßig</option>
+                      <option value="14">Konsequent gepflegt</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    Review-Flow (sauberer Prozess, um echte Bewertungen zu erhalten)
+                    <select id="score-flow">
+                      <option value="0">Nein</option>
+                      <option value="6">Teilweise</option>
+                      <option value="14">Ja</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+
+              <div class="score-output">
+                <strong>Quick Wins</strong>
+                <ul class="checklist" id="score-tips"></ul>
+                <p class="microcopy" style="margin-top:10px;">
+                  Tipp: Im kostenlosen Check machen wir daraus eine kurze Prioritätenliste mit konkreten nächsten Schritten.
+                </p>
+              </div>
+            </details>
           </aside>
         </div>
       </div>
