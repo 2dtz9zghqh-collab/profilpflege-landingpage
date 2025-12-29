@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Impressum | ProfilWerk</title>
-  <meta name="description" content="Impressum von ProfilWerk. Bitte mit Ihren Unternehmensdaten ersetzen." />
+  <meta name="description" content="Impressum von ProfilWerk (Vorlage mit Platzhaltern). Bitte mit Ihren Unternehmensdaten ersetzen." />
   <link rel="icon" href="assets/favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -17,88 +17,83 @@
         <img src="assets/logo.svg" alt="ProfilWerk" width="220" height="56" />
       </a>
 
-      <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation">
-        <a href="index.html#warum">Warum</a>
-        <a href="index.html#zahlen">Zahlen</a>
-        <a href="index.html#ablauf">Ablauf</a>
-        <a href="index.html#abo">Preise</a>
-        <a href="index.html#check">Check</a>
+      <nav id="site-nav" class="site-nav" aria-label="Navigation">
+        <a href="index.html#check">Kostenloser Check</a>
+        <a href="index.html#abo">Abo</a>
         <a href="index.html#faq">FAQ</a>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-phone" data-phone-tel href="tel:+490000000000" aria-label="Jetzt anrufen">
-          <span class="btn-ic" aria-hidden="true">☎</span>
-          <span class="btn-text" data-phone-text>+49 0000 000000</span>
-        </a>
+        <a class="btn btn-phone" data-phone-tel href="tel:+490000000000" aria-label="Jetzt anrufen">☎ <span data-phone-text>+49 0000 000000</span></a>
         <a class="btn btn-primary" href="index.html#check">Kostenloser Check</a>
-
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
-          Menü
-        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">Menü</button>
       </div>
     </div>
   </header>
 
-  <main id="main" tabindex="-1">
-    <section class="section section-muted">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h1>Impressum</h1>
-            <p class="muted">Platzhalter. Bitte durch Ihre echten Unternehmensdaten ersetzen.</p>
-          </div>
-          <div class="section-head-cta">
-            <a class="btn btn-ghost" href="index.html#top">Zurück</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h2 class="h3">Angaben gemäß § 5 TMG</h2>
-          <p class="muted">
-            <strong>[Unternehmensname]</strong><br />
-            [Straße Hausnummer]<br />
-            [PLZ Ort]<br />
-            Deutschland
-          </p>
-
-          <h2 class="h3 mt-4">Kontakt</h2>
-          <p class="muted">
-            Telefon: <a data-phone-tel href="tel:+490000000000"><span data-phone-text>+49 0000 000000</span></a><br />
-            E-Mail: <a href="mailto:info@DEINE-DOMAIN.DE">info@DEINE-DOMAIN.DE</a>
-          </p>
-
-          <h2 class="h3 mt-4">Vertretungsberechtigt</h2>
-          <p class="muted">[Vorname Nachname / Inhaber / Geschäftsführer]</p>
-
-          <h2 class="h3 mt-4">Umsatzsteuer</h2>
-          <p class="muted">USt-IdNr.: [DE123456789]</p>
-
-          <h2 class="h3 mt-4">Haftung für Inhalte</h2>
-          <p class="muted">
-            Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität
-            der Inhalte übernehmen wir keine Gewähr.
-          </p>
-
-          <h2 class="h3 mt-4">Haftung für Links</h2>
-          <p class="muted">
-            Diese Website enthält Links zu externen Websites Dritter. Auf deren Inhalte haben wir keinen Einfluss.
-            Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.
-          </p>
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h1>Impressum</h1>
+          <p class="muted">Vorlage mit Platzhaltern. Bitte mit Ihren Daten ersetzen. Keine Rechtsberatung.</p>
         </div>
       </div>
-    </section>
+
+      <div class="card">
+        <h3>Anbieter</h3>
+        <p class="muted">
+          <strong>[Unternehmensname / Inhaber]</strong><br/>
+          [Straße Hausnummer]<br/>
+          [PLZ Ort]<br/>
+          Deutschland
+        </p>
+
+        <h3 style="margin-top:18px;">Kontakt</h3>
+        <p class="muted">
+          Telefon: <a data-phone-tel href="tel:+490000000000">[+49 …]</a><br/>
+          E-Mail: <a href="mailto:info@DEINE-DOMAIN.DE">[info@…]</a>
+        </p>
+
+        <h3 style="margin-top:18px;">Umsatzsteuer</h3>
+        <p class="muted">
+          Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: <strong>[USt-IdNr.]</strong><br/>
+          Falls nicht vorhanden: Feld entfernen.
+        </p>
+
+        <h3 style="margin-top:18px;">Verantwortlich für Inhalte</h3>
+        <p class="muted">
+          Verantwortlich i.S.d. § 18 Abs. 2 MStV: <strong>[Name, Anschrift wie oben]</strong>
+        </p>
+
+        <h3 style="margin-top:18px;">Hosting</h3>
+        <p class="muted">
+          Hosting-Dienstleister: <strong>[Name, Anschrift / Land]</strong><br/>
+          (Optional) Datenschutzkontakt Hosting: <strong>[E-Mail/URL]</strong>
+        </p>
+
+        <h3 style="margin-top:18px;">Haftungshinweise</h3>
+        <p class="muted">
+          Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.
+          Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+        </p>
+
+        <p class="microcopy" style="margin-top:14px;">
+          Hinweis: Diese Website ist nicht mit Google verbunden. „Google“ ist eine Marke von Google LLC.
+        </p>
+      </div>
+
+      <p class="microcopy" style="margin-top:14px;">Hinweis: Das ist keine Rechtsberatung.</p>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
         <p class="footer-brand">ProfilWerk</p>
-        <p class="footer-small">© <span id="year"></span> ProfilWerk</p>
+        <p class="footer-small"><a href="index.html">Zur Startseite</a></p>
       </div>
-
       <nav class="footer-nav" aria-label="Footer">
-        <a href="index.html#top">Start</a>
         <a href="datenschutz.html">Datenschutz</a>
       </nav>
     </div>

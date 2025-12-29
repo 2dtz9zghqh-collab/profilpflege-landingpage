@@ -49,13 +49,11 @@
       else openNav();
     });
 
-    // Close on link click
     nav.addEventListener("click", (e) => {
       const t = e.target;
       if (t && t.tagName === "A") closeNav();
     });
 
-    // Close on ESC / outside click
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeNav();
     });
@@ -85,7 +83,6 @@
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-
       if (!form.reportValidity()) return;
 
       const data = new FormData(form);
@@ -95,11 +92,8 @@
       if (gotcha) return;
 
       const company = (data.get("company") || "").toString().trim();
-
-      // Subject
       if (company) data.set("_subject", `Kostenloser Check: ${company}`);
 
-      // UI state
       setStatus("Sende …");
       if (submitBtn) {
         submitBtn.disabled = true;
@@ -108,7 +102,6 @@
       }
 
       try {
-        // Guard: action must be a real endpoint
         if (!form.action || form.action.includes("DEIN_FORM_ID")) {
           setStatus(`Formular ist noch nicht verbunden (Formspree-ID fehlt). Alternativ: bitte anrufen unter ${PHONE_TEXT}.`);
           return;
@@ -148,126 +141,68 @@
     }
   }
 
-  // Profil-Score Vorschau (optional, clientseitig)
-  const elRating = document.getElementById("in_rating");
-  const elReviews = document.getElementById("in_reviews");
-  const elResponse = document.getElementById("in_response");
-  const elRecency = document.getElementById("in_recency");
-  const elComplete = document.getElementById("in_complete");
+  // Profil-Score (optional, clientseitig)
+  const scoreFill = document.getElementById("score-fill");
+  const scoreNumber = document.getElementById("score-number");
+  const scoreBadge = document.getElementById("score-badge");
+  const scoreTips = document.getElementById("score-tips");
 
-  const vResponse = document.getElementById("v_response");
-  const vRecency = document.getElementById("v_recency");
-  const vComplete = document.getElementById("v_complete");
+  const fReplies = document.getElementById("score-replies");
+  const fFreshness = document.getElementById("score-freshness");
+  const fCompleteness = document.getElementById("score-completeness");
+  const fContent = document.getElementById("score-content");
+  const fFlow = document.getElementById("score-flow");
 
-  const outScore = document.getElementById("out_score");
-  const outBar = document.getElementById("out_bar");
-  const outLabel = document.getElementById("out_label");
-
-  const outTrust = document.getElementById("out_trust");
-  const outAct = document.getElementById("out_act");
-  const outProf = document.getElementById("out_prof");
-
-  const barTrust = document.getElementById("bar_trust");
-  const barAct = document.getElementById("bar_act");
-  const barProf = document.getElementById("bar_prof");
-
-  const tipsList = document.getElementById("score_tips");
-
-  function clamp(n, min, max) {
-    return Math.max(min, Math.min(max, n));
-  }
-
-  function num(el, fallback) {
-    if (!el) return fallback;
+  function toNum(el) {
+    if (!el) return 0;
     const n = Number(el.value);
-    return Number.isFinite(n) ? n : fallback;
-  }
-
-  function scoreLabel(score) {
-    if (score >= 85) return "sehr stark";
-    if (score >= 70) return "solide Basis";
-    if (score >= 55) return "ausbaufähig";
-    return "klarer Hebel";
-  }
-
-  function calcLogScore(x, maxX, maxScore) {
-    // Log-Skalierung, damit kleine Zahlen nicht komplett untergehen.
-    const v = clamp(x, 0, maxX);
-    const s = Math.log10(v + 1) / Math.log10(maxX + 1);
-    return clamp(s * maxScore, 0, maxScore);
-  }
-
-  function renderTips({ rating, reviews, response, recency, complete, total }) {
-    if (!tipsList) return;
-
-    const tips = [];
-
-    if (response < 50) tips.push("Antwortquote erhöhen: auch kurze Reviews ruhig und freundlich beantworten.");
-    if (recency > 12) tips.push("Aktivität sichtbar machen: Review-Flow starten, damit regelmäßig echte Bewertungen reinkommen.");
-    if (complete < 70) tips.push("Profil vervollständigen: Leistungen, Kategorien, Attribute und Kontaktwege sauber pflegen.");
-    if (rating < 4.2) tips.push("Kritik souverän bearbeiten: Standard-Antworten + Eskalationsweg zur Klärung definieren.");
-    if (reviews < 30) tips.push("Mehr Social Proof: nach Termin oder Kauf freundlich um eine Bewertung bitten, ohne Druck.");
-
-    if (!tips.length) tips.push("Gute Basis. Nächster Hebel: Konsistenz und Reaktionsgeschwindigkeit als Routine.");
-
-    tipsList.innerHTML = "";
-    tips.slice(0, 5).forEach((t) => {
-      const li = document.createElement("li");
-      li.textContent = t;
-      tipsList.appendChild(li);
-    });
-
-    if (outLabel) outLabel.textContent = scoreLabel(total);
+    return Number.isFinite(n) ? n : 0;
   }
 
   function updateScore() {
-    if (!elRating || !elReviews || !elResponse || !elRecency || !elComplete) return;
+    if (!scoreFill || !scoreNumber || !scoreBadge || !scoreTips) return;
 
-    const rating = clamp(num(elRating, 4.4), 1, 5);
-    const reviews = clamp(num(elReviews, 63), 0, 5000);
-    const response = clamp(num(elResponse, 60), 0, 100);
-    const recency = clamp(num(elRecency, 6), 0, 52); // Wochen
-    const complete = clamp(num(elComplete, 70), 0, 100);
+    const replies = toNum(fReplies);            // max 30
+    const freshness = toNum(fFreshness);        // max 24
+    const completeness = toNum(fCompleteness);  // max 18
+    const content = toNum(fContent);            // max 14
+    const flow = toNum(fFlow);                  // max 14
 
-    if (vResponse) vResponse.textContent = String(Math.round(response));
-    if (vRecency) vRecency.textContent = String(Math.round(recency));
-    if (vComplete) vComplete.textContent = String(Math.round(complete));
+    let score = replies + freshness + completeness + content + flow;
+    score = Math.max(0, Math.min(100, score));
 
-    // Vertrauen (40): Sterne (max 22) + Antwortquote (max 18)
-    const sStars = clamp(((rating - 1) / 4) * 22, 0, 22);
-    const sResp = clamp((response / 100) * 18, 0, 18);
-    const trust = clamp(sStars + sResp, 0, 40);
+    scoreFill.style.width = `${score}%`;
+    scoreNumber.textContent = String(score);
+    scoreBadge.textContent = `Score: ${score}/100`;
 
-    // Aktivität (30): Review-Menge (max 16, log) + Frische (max 14)
-    const sReviews = calcLogScore(reviews, 5000, 16);
-    const sFresh = clamp((1 - recency / 52) * 14, 0, 14);
-    const act = clamp(sReviews + sFresh, 0, 30);
+    const tips = [];
+    if (replies <= 10) tips.push("Antworten standardisieren: ruhige Vorlagen je Fall (Lob, neutral, Kritik).");
+    if (freshness <= 8) tips.push("Aktualität fixen: Öffnungszeiten, Leistungen, Kontaktwege konsequent korrekt halten.");
+    if (completeness <= 6) tips.push("Profil vervollständigen: Kategorien, Leistungen, Attribute, kurze Service-Texte.");
+    if (content <= 5) tips.push("Sichtbare Aktivität: regelmäßige, neutrale Fotos oder Updates.");
+    if (flow === 0) tips.push("Review-Flow einführen: Link/QR nach Termin oder Kauf, freundlich und regelkonform.");
 
-    // Profilqualität (30): Vollständigkeit
-    const prof = clamp((complete / 100) * 30, 0, 30);
+    if (tips.length === 0) {
+      tips.push("Sie sind gut aufgestellt. Nächster Hebel: Konsistenz und Reaktionsgeschwindigkeit als Routine.");
+    }
 
-    const total = Math.round(clamp(trust + act + prof, 0, 100));
-
-    if (outScore) outScore.textContent = String(total);
-    if (outBar) outBar.style.width = `${total}%`;
-
-    if (outTrust) outTrust.textContent = String(Math.round(trust));
-    if (outAct) outAct.textContent = String(Math.round(act));
-    if (outProf) outProf.textContent = String(Math.round(prof));
-
-    if (barTrust) barTrust.style.width = `${(trust / 40) * 100}%`;
-    if (barAct) barAct.style.width = `${(act / 30) * 100}%`;
-    if (barProf) barProf.style.width = `${(prof / 30) * 100}%`;
-
-    renderTips({ rating, reviews, response, recency, complete, total });
+    scoreTips.innerHTML = "";
+    tips.forEach((t) => {
+      const li = document.createElement("li");
+      li.textContent = t;
+      scoreTips.appendChild(li);
+    });
   }
 
-  [elRating, elReviews].forEach((el) => {
-    if (el) el.addEventListener("input", updateScore);
-  });
-  [elResponse, elRecency, elComplete].forEach((el) => {
-    if (el) el.addEventListener("input", updateScore);
+  [fReplies, fFreshness, fCompleteness, fContent, fFlow].forEach((el) => {
+    if (el) el.addEventListener("change", updateScore);
   });
 
+  // Defaults + initial
+  if (fReplies) fReplies.value = "20";
+  if (fFreshness) fFreshness.value = "16";
+  if (fCompleteness) fCompleteness.value = "12";
+  if (fContent) fContent.value = "5";
+  if (fFlow) fFlow.value = "6";
   updateScore();
 })();
