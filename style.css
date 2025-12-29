@@ -690,3 +690,11 @@ section{ scroll-margin-top: 90px; }
   .hero-mini{ grid-template-columns: 1fr; }
   .grid-2{ grid-template-columns: 1fr; }
 }
+.section-img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.02);
+}
