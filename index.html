@@ -1,752 +1,432 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <title>ProfilWerk | Google-Unternehmensprofil Pflege & Bewertungsmanagement im Abo</title>
-  <meta name="description" content="Ruhige, seriöse Profilpflege im Abo: Bewertungen beantworten, Infos aktuell halten, Review-Flow. Preise sichtbar. Kostenloser Profil-Check oder direkt anrufen." />
-  <meta name="theme-color" content="#4f7cff" />
-
-  <meta property="og:title" content="ProfilWerk | Profilpflege & Bewertungsmanagement (Abo)" />
-  <meta property="og:description" content="Mehr Anrufe aus Google durch eine verlässliche Profilroutine: Antworten, Aktualität, Review-Flow. Kostenloser Profil-Check." />
-  <meta property="og:type" content="website" />
-
-  <link rel="icon" href="assets/favicon.svg" />
-  <link rel="stylesheet" href="style.css" />
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProfilWerk – Google‑Unternehmensprofil & Bewertungsmanagement</title>
+  <meta name="description" content="ProfilWerk hilft lokalen Unternehmen in Bad Bramstedt und Umgebung dabei, ihr Google Unternehmensprofil professionell zu pflegen, Bewertungen zuverlässig zu beantworten und so mehr Anfragen zu gewinnen.">
+  <meta name="keywords" content="Google Unternehmensprofil Pflege, Google Bewertungen beantworten, Bewertungsmanagement, Reputation Management, Bad Bramstedt">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="ProfilWerk – professionelle Pflege Ihres Google Unternehmensprofils">
+  <meta property="og:description" content="Mehr Vertrauen und Sichtbarkeit für Ihr lokales Unternehmen: Wir übernehmen die Pflege Ihres Google‑Unternehmensprofils, beantworten Bewertungen und liefern transparente Reports.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.profilpflege.de/">
+  <meta property="og:image" content="assets/hero-image.webp">
+  <!-- Structured data: LocalBusiness, Service, FAQ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "ProfilWerk",
-    "url": "https://DEINE-DOMAIN.DE",
-    "telephone": "+49 0000 000000",
-    "email": "info@DEINE-DOMAIN.DE",
+    "image": [
+      "assets/hero-image.webp"
+    ],
+    "telephone": "+49 162 9625625",
+    "email": "info@profilpflege.de",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Musterstraße 1",
-      "postalCode": "12345",
-      "addressLocality": "Musterstadt",
+      "streetAddress": "Straße und Hausnummer",
+      "addressLocality": "Bad Bramstedt",
+      "postalCode": "24576",
       "addressCountry": "DE"
     },
-    "areaServed": "Deutschland",
-    "description": "Abo-Service für Google-Unternehmensprofil-Pflege & Bewertungsmanagement: Antworten, Aktualität, Review-Flow, kurze Reports."
+    "url": "https://www.profilpflege.de/",
+    "description": "Professionelle Betreuung und Pflege Ihres Google‑Unternehmensprofils sowie zuverlässiges Bewertungsmanagement mit schnellen Reaktionszeiten.",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.918",
+        "longitude": 9.878
+      },
+      "geoRadius": 50000
+    },
+    "makesOffer": {
+      "@type": "Service",
+      "name": "Google‑Unternehmensprofil Pflege & Bewertungsmanagement",
+      "serviceType": "Reputation Management",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "ProfilWerk"
+      }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Dürfen wir auf jede Bewertung antworten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wir beantworten nur echte Kundenbewertungen. Die Antworten sind transparent, höflich und im Einklang mit den Richtlinien von Google Business Profile."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie geht ihr mit Fake‑Reviews um?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wir prüfen auffällige Bewertungen und unterstützen Sie bei der Meldung an Google, falls sie gegen die Richtlinien verstoßen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie schnell reagiert ihr?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Je nach Paket reagieren wir innerhalb von 72 Stunden, 24 Stunden oder am selben Werktag auf neue Bewertungen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Branchen betreut ihr?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wir arbeiten für lokale Dienstleister, Handwerksbetriebe, Praxen und andere Unternehmen, die vor Ort mit Kunden arbeiten."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was kostet es wirklich?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unsere Pakete starten ab 149 € pro Monat (netto). Details finden Sie in der Preistabelle weiter unten."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie funktioniert die Kündigung?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alle Pakete können monatlich gekündigt werden. Es gibt keine versteckten Gebühren."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was braucht ihr von mir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Für den Start benötigen wir Zugriff auf Ihr Google‑Unternehmensprofil oder die Berechtigung zur Verwaltung sowie grundlegende Unternehmensinformationen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hat das Auswirkungen auf SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eine gepflegte Präsenz und zeitnahe Antworten auf Bewertungen können das Vertrauen in Ihr Unternehmen steigern und indirekt positive Signale an Google senden. Wir geben jedoch keine Ranking‑Garantie."
+        }
+      }
+    ]
   }
   </script>
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Zum Inhalt</a>
-
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Startseite">
-        <img src="assets/logo.svg" alt="ProfilWerk" width="220" height="56" />
-      </a>
-
-      <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation">
-        <a href="#warum">Warum</a>
-        <a href="#zahlen">Zahlen</a>
-        <a href="#ablauf">Ablauf</a>
-        <a href="#abo">Preise</a>
-        <a href="#check">Check</a>
-        <a href="#faq">FAQ</a>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <!-- Navigation -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="#" aria-label="ProfilWerk Startseite">ProfilWerk</a>
+      </div>
+      <nav class="primary-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#pakete">Pakete</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
       </nav>
-
-      <div class="header-actions">
-        <a class="btn btn-phone" data-phone-tel href="tel:+490000000000" aria-label="Jetzt anrufen">
-          <span class="btn-ic" aria-hidden="true">☎</span>
-          <span class="btn-text" data-phone-text>+49 0000 000000</span>
-        </a>
-        <a class="btn btn-primary" href="#check">Kostenloser Check</a>
-
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
-          Menü
-        </button>
+      <div class="nav-cta">
+        <a href="#kontakt" class="button primary">Kostenloser Profil‑Check</a>
+        <a href="tel:+491629625625" class="button secondary">Anrufen</a>
       </div>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
-    <section id="top" class="hero" aria-label="Einführung">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="pill" role="note">
-            Ruhig, seriös, kein Werbedruck
-            <span class="dot" aria-hidden="true">•</span>
-            Antwortentwurf ab 24h möglich
-          </div>
-
-          <h1>Mehr Anrufe aus Google, weil Ihr Profil verlässlich wirkt.</h1>
-
-          <p class="lead">
-            Interessenten entscheiden oft in Sekunden: „Rufe ich an oder klicke ich weiter?“
-            Unbeantwortete Bewertungen, veraltete Infos oder ein stilles Profil erzeugen Unsicherheit.
-            ProfilWerk übernimmt die laufende Pflege im Abo, damit Ihr Profil professionell und aktuell bleibt.
-          </p>
-
-          <div class="hero-cta" role="group" aria-label="Hauptaktionen">
-            <a class="btn btn-primary" href="#check">Kostenloser Check</a>
-            <a class="btn btn-ghost" data-phone-tel href="tel:+490000000000">Direkt anrufen</a>
-          </div>
-
-          <p class="microcopy">
-            Kostenlos & unverbindlich. Danach entscheiden Sie: selbst umsetzen oder als Abo abgeben.
-          </p>
-
-          <div class="trust-row" role="list" aria-label="Vertrauensargumente">
-            <div class="trust-item" role="listitem">
-              <span class="trust-ic" aria-hidden="true">✓</span>
-              <span><strong>Monatsroutine</strong> statt sporadischer Aktionen</span>
-            </div>
-            <div class="trust-item" role="listitem">
-              <span class="trust-ic" aria-hidden="true">✓</span>
-              <span><strong>Freigabe optional</strong> vor Veröffentlichung</span>
-            </div>
-            <div class="trust-item" role="listitem">
-              <span class="trust-ic" aria-hidden="true">✓</span>
-              <span><strong>Regelkonform</strong> ohne Fake-Bewertungen</span>
-            </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Professionelles Google‑Unternehmensprofil & zuverlässiges Bewertungs­management</h1>
+          <p>Wir pflegen Ihr Profil, beantworten Ihre Bewertungen und steigern Ihre lokale Sichtbarkeit – transparent, schnell und rechtssicher.</p>
+          <div class="cta-group">
+            <a href="#kontakt" class="button primary big">Kostenlosen Profil‑Check starten</a>
+            <a href="tel:+491629625625" class="button secondary big">Jetzt anrufen</a>
           </div>
         </div>
+        <div class="hero-image-wrapper">
+          <img src="assets/hero-image.webp" alt="Ruhiges Büro mit Person, die an Laptop arbeitet" loading="lazy" width="600" height="400">
+        </div>
+      </div>
+    </section>
 
-        <div class="hero-card" aria-label="Visueller Eindruck">
-          <img
-            class="section-img"
-            src="assets/hero-trust.png"
-            alt="Seriöse Arbeitsszene mit ruhiger Office-Atmosphäre"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-            width="1200"
-            height="750"
-          />
+    <!-- Problem Section -->
+    <section id="problem" class="problem">
+      <div class="container">
+        <h2>Was kostet Nichtstun?</h2>
+        <p>Mehr als die Hälfte der Kunden erwartet eine Antwort auf ihre Bewertung innerhalb einer Woche; ein Drittel sogar noch schneller. Ohne Reaktion riskieren Sie nicht nur eine schlechte Außenwirkung, sondern verschenken auch wertvolle Ranking‑Signale. Ein ungepflegtes Profil wirkt unprofessionell, schreckt potenzielle Kundschaft ab und kann dauerhaft die Sichtbarkeit beeinträchtigen.</p>
+        <p>Mit ProfilWerk vermeiden Sie diese Risiken: Wir übernehmen Ihre Profil‑Pflege, kümmern uns um alle Bewertungen und lassen Konflikte gar nicht erst eskalieren.</p>
+      </div>
+    </section>
 
-          <div class="hero-card-body">
-            <h2 class="h3">Worum es in der Praxis geht</h2>
-            <p class="muted">
-              Nicht nur Sterne, sondern auch: <strong>Antworten</strong>, <strong>Aktivität</strong>, <strong>Vollständigkeit</strong>.
-              Diese Signale reduzieren Unsicherheit und machen den Anruf wahrscheinlicher.
-            </p>
-
-            <div class="hero-mini" aria-label="Kurzüberblick">
-              <div class="mini">
-                <span class="k">Antworten</span>
-                <span class="v">klar & souverän</span>
-              </div>
-              <div class="mini">
-                <span class="k">Aktualität</span>
-                <span class="v">immer korrekt</span>
-              </div>
-              <div class="mini">
-                <span class="k">Report</span>
-                <span class="v">kurz & nutzbar</span>
-              </div>
-            </div>
+    <!-- Prozess Section -->
+    <section id="prozess" class="prozess">
+      <div class="container">
+        <h2>Unser transparenter Prozess</h2>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Audit & Analyse</h3>
+            <p>Wir prüfen Ihr bestehendes Google‑Unternehmensprofil, identifizieren Optimierungspotenziale und erstellen einen kostenlosen Report.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Setup & Optimierung</h3>
+            <p>Wir ergänzen fehlende Informationen, richten Kategorien und Fotos ein, optimieren NAP‑Daten und bereiten Ihr Profil auf regelmäßige Beiträge vor.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Laufende Pflege & Review‑Management</h3>
+            <p>Wir erstellen Posts, beantworten Bewertungen gemäß den offiziellen Richtlinien, managen Q&A und überwachen Ihr Profil. Bei negativen Bewertungen bleiben wir stets höflich und lösungsorientiert.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Reporting & Optimierung</h3>
+            <p>Monatliche Reports zeigen Fortschritte und Erkenntnisse. Gemeinsam justieren wir die Strategie für noch bessere Ergebnisse.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-muted" id="warum" aria-label="Warum das wirkt">
+    <!-- Leistungen Section -->
+    <section id="leistungen" class="leistungen">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Warum Bewertungsmanagement direkt auf Anrufe wirkt</h2>
-            <p class="muted">
-              Bewertungen sind Social Proof. Antworten reduzieren Unsicherheit. Aktualität reduziert Zweifel.
-              Zusammen sinkt die Reibung in der Entscheidung.
-            </p>
-          </div>
-        </div>
-
-        <div class="split">
-          <div>
-            <div class="grid-3">
-              <article class="card">
-                <h3>Still wirkt riskant</h3>
-                <p class="muted">
-                  Unbeantwortete Kritik wirkt wie ein offener Konflikt. Eine kurze, souveräne Antwort signalisiert: „Wir kümmern uns.“
-                </p>
-              </article>
-
-              <article class="card">
-                <h3>Vertrauen ohne Druck</h3>
-                <p class="muted">
-                  Ein gepflegtes Profil ist wie ein guter Empfang: ruhig, professionell, verbindlich. Das fühlt sich nicht nach Werbung an.
-                </p>
-              </article>
-
-              <article class="card">
-                <h3>Routine schlägt Aktionismus</h3>
-                <p class="muted">
-                  Kleine, konsequente Schritte wirken stärker als seltene „Großaktionen“. Wir machen daraus einen Prozess, der bleibt.
-                </p>
-              </article>
-            </div>
-
-            <div class="card mt-4">
-              <h3>Typische Folgen ohne Routine</h3>
-              <ul class="checklist">
-                <li>Bewertungen bleiben liegen und kosten Vertrauen.</li>
-                <li>Öffnungszeiten oder Leistungen sind veraltet und erzeugen Absprünge.</li>
-                <li>Kein Review-Flow, dadurch weniger frische Bewertungen.</li>
-                <li>Wettbewerber wirken aktiver und bekommen den Anruf zuerst.</li>
-              </ul>
-              <div class="callout">
-                <strong>Merksatz:</strong> Wenn Menschen unsicher sind, rufen sie nicht an. Sie klicken weiter.
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              class="section-img"
-              src="assets/workflow-team.png"
-              alt="Ruhige Team-Besprechung im Büro"
-              loading="lazy"
-              decoding="async"
-              width="1200"
-              height="800"
-            />
-            <h3 class="mt-4">Zielbild</h3>
-            <p class="muted">
-              Ein Profil, das so wirkt wie Ihr bester Mitarbeiter: freundlich, verbindlich, zuverlässig. Auch wenn Sie gerade arbeiten.
-            </p>
-          </div>
-        </div>
+        <h2>Leistungsumfang</h2>
+        <ul class="leistungen-list">
+          <li><strong>Google Posts & Updates:</strong> Wir erstellen redaktionelle Beiträge, Angebote und Neuigkeiten für Ihr Profil.</li>
+          <li><strong>Q&A & Nachrichten:</strong> Wir beantworten Kundenfragen und moderieren den Dialog.</li>
+          <li><strong>Review‑Antworten:</strong> Persönliche Antworten auf positive, neutrale und negative Bewertungen – stets im Einklang mit den offiziellen Richtlinien.</li>
+          <li><strong>Eskala­tionsleitfaden:</strong> Umgang mit Konflikten und Weiterleitung an Sie, wenn nötig.</li>
+          <li><strong>Monitoring & Alerts:</strong> Wir überwachen Ihr Profil und informieren Sie bei auffälligen Änderungen.</li>
+          <li><strong>Reporting & Beratung:</strong> Monatliche Auswertung inklusive Handlungsempfehlungen.</li>
+        </ul>
       </div>
     </section>
 
-    <section class="section" id="zahlen" aria-label="Zahlen und Belege">
+    <!-- Pakete Section -->
+    <section id="pakete" class="pakete">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Zahlen & Wirkung</h2>
-            <p class="muted">
-              Studien und Auswertungen zeigen Zusammenhänge. Je nach Branche und Standort kann die Wirkung variieren.
-              Assoziation bzw. Durchschnittswerte, keine Garantie.
-            </p>
-          </div>
-        </div>
-
-        <div class="bento">
-          <article class="bento-card">
-            <div class="kpi-row">
-              <span class="kpi-badge" aria-label="Kennzahl">≈2×</span>
-              <p class="kpi-text">
-                BrightLocal berichtet: Konsumenten sind etwa doppelt so wahrscheinlich, ein Unternehmen zu wählen,
-                wenn auf alle Bewertungen geantwortet wird (vs. keine Antworten).
-              </p>
-            </div>
-            <p class="source">
-              Quelle:
-              <a href="https://www.brightlocal.com/learn/responding-to-online-reviews/" target="_blank" rel="noopener">BrightLocal – Responding to Online Reviews</a>
-            </p>
-          </article>
-
-          <article class="bento-card">
-            <div class="kpi-row">
-              <span class="kpi-badge" aria-label="Kennzahl">5–9%</span>
-              <p class="kpi-text">
-                Luca (Harvard) fand: Ein 1-Stern-Anstieg kann bei unabhängigen Restaurants mit 5–9% mehr Umsatz zusammenhängen
-                (modellabhängig).
-              </p>
-            </div>
-            <p class="source">
-              Quelle:
-              <a href="https://www.hbs.edu/ris/Publication%20Files/12-016_a7e4a5a2-03f9-490d-b093-8f951238dba2.pdf" target="_blank" rel="noopener">HBS / Luca – Paper (PDF)</a>
-            </p>
-          </article>
-
-          <article class="bento-card">
-            <div class="kpi-row">
-              <span class="kpi-badge" aria-label="Kennzahl">≈35%</span>
-              <p class="kpi-text">
-                In einer Womply-Auswertung (zusammengefasst bei Search Engine Land) sind Unternehmen, die auf Reviews reagieren,
-                mit ca. 35% mehr Umsatz assoziiert.
-              </p>
-            </div>
-            <p class="source">
-              Quelle:
-              <a href="https://searchengineland.com/review-counts-matter-more-to-local-business-revenue-than-star-ratings-according-to-study-320271" target="_blank" rel="noopener">Search Engine Land – Womply Summary</a>
-            </p>
-          </article>
-        </div>
-
-        <p class="microcopy mt-4">
-          Hinweis: Ergebnisse hängen u.a. von Branche, Wettbewerb und Kundenerlebnis ab.
-        </p>
-      </div>
-    </section>
-
-    <section class="section section-muted" id="ablauf" aria-label="Ablauf">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>So funktioniert ProfilWerk</h2>
-            <p class="muted">Ein Prozess, der nicht abreißt, wenn es stressig wird.</p>
-          </div>
-        </div>
-
-        <div class="split">
-          <div class="card">
-            <ol class="steps">
-              <li>
-                <strong>Kostenloser Start-Check</strong>
-                <span class="muted">Profilzustand, Reviews, Antworten, Vollständigkeit, Reibungspunkte.</span>
-              </li>
-              <li>
-                <strong>Tonalität & Regeln</strong>
-                <span class="muted">Wie soll es klingen? Freigabe ja oder nein. Standards werden festgelegt.</span>
-              </li>
-              <li>
-                <strong>Antwort-Routine</strong>
-                <span class="muted">Neue Bewertungen werden regelmäßig bearbeitet, ruhig und lösungsorientiert.</span>
-              </li>
-              <li>
-                <strong>Review-Flow</strong>
-                <span class="muted">Sauberer Weg zu mehr echten Bewertungen, ohne Druck.</span>
-              </li>
-              <li>
-                <strong>Mini-Report</strong>
-                <span class="muted">Kurz: was neu ist, was getan wurde, was als Nächstes sinnvoll ist.</span>
-              </li>
-            </ol>
-
-            <div class="callout mt-4">
-              <strong>Wichtig:</strong> Keine Fake-Bewertungen, keine Incentives, kein Tricksen.
-              Fokus auf echte Kundenerfahrung und klare Kommunikation.
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              class="section-img"
-              src="assets/calm-office.png"
-              alt="Ruhige Beratungssituation im Büro"
-              loading="lazy"
-              decoding="async"
-              width="1200"
-              height="800"
-            />
-            <h3 class="mt-4">Das Ergebnis</h3>
-            <p class="muted">
-              Ein Profil, das zuverlässig wirkt und keine Fragen offenlässt, bevor jemand anruft.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="abo" aria-label="Pakete und Preise">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Pakete & Preise</h2>
-            <p class="muted">
-              Preise sind „ab“-Werte. Der Endpreis hängt von Anzahl Standorte, Bewertungseingang, Freigabe-Workflow
-              und gewünschter Reaktionsgeschwindigkeit ab.
-            </p>
-          </div>
-        </div>
-
-        <div class="pricing">
-          <article class="price-card">
-            <h3>Basis</h3>
-            <p class="muted">Für Betriebe, die „nichts liegen lassen“ wollen.</p>
-
-            <div class="price">
-              <span class="price-amount">ab 249&nbsp;€</span>
-              <span class="price-term">/ Monat</span>
-            </div>
-            <p class="price-sub">Typischer Bereich: 249–399&nbsp;€ <span class="muted">zzgl. USt.</span></p>
-
-            <div class="sla" aria-label="Reaktionszeit">
-              <span class="sla-k">SLA</span>
-              <span class="sla-v">Standard: Antwortentwurf innerhalb 48 Stunden (Werktage)</span>
-            </div>
-
-            <ul class="price-list">
-              <li>Monitoring neuer Bewertungen</li>
-              <li>Antwortentwürfe nach definierter Tonalität</li>
-              <li>Mini-Report (kurz, verständlich)</li>
-              <li>Freigabe optional (Veröffentlichung nach Ihrer Freigabe)</li>
+        <h2>Pakete & Preise</h2>
+        <div class="paket-grid">
+          <div class="paket-card">
+            <h3>Starter</h3>
+            <p class="price">ab 149 € / Monat<span>zzgl. MwSt.</span></p>
+            <ul>
+              <li>Bis zu 10 Bewertungen/Monat</li>
+              <li>1 Post pro Monat</li>
+              <li>Reaktionszeit: ≤72 h (werktags)</li>
+              <li>Monatliches Kurz‑Report</li>
+              <li>1 Standort inklusive</li>
             </ul>
-
-            <a class="btn btn-ghost btn-block" href="#check">Kostenloser Check</a>
-          </article>
-
-          <article class="price-card featured" aria-label="Empfohlenes Paket">
-            <div class="tag">Empfohlen</div>
+            <a href="#kontakt" class="button primary">Profil‑Check starten</a>
+          </div>
+          <div class="paket-card highlighted">
             <h3>Wachstum</h3>
-            <p class="muted">Für aktive Profile mit spürbar weniger Reibung.</p>
-
-            <div class="price">
-              <span class="price-amount">ab 399&nbsp;€</span>
-              <span class="price-term">/ Monat</span>
-            </div>
-            <p class="price-sub">Typischer Bereich: 399–699&nbsp;€ <span class="muted">zzgl. USt.</span></p>
-
-            <div class="sla" aria-label="Reaktionszeit">
-              <span class="sla-k">SLA</span>
-              <span class="sla-v">Schnell: Antwortentwurf innerhalb 24 Stunden (Werktage)</span>
-            </div>
-
-            <ul class="price-list">
-              <li>Alles aus Basis</li>
-              <li>Profil-Vollständigkeit (Kategorien, Leistungen, Attribute)</li>
-              <li>Review-Flow (Link/QR + Vorlage, sauber & regelkonform)</li>
-              <li>Freigabe optional oder Veröffentlichung nach Standards</li>
+            <p class="price">ab 299 € / Monat<span>zzgl. MwSt.</span></p>
+            <ul>
+              <li>Bis zu 30 Bewertungen/Monat</li>
+              <li>4 Posts pro Monat</li>
+              <li>Reaktionszeit: ≤24 h (werktags)</li>
+              <li>Monatlicher Report & kurzer Strategie‑Call</li>
+              <li>1 Standort inklusive</li>
             </ul>
-
-            <a class="btn btn-primary btn-block" href="#check">Kostenloser Check</a>
-          </article>
-
-          <article class="price-card">
-            <h3>Standorte+</h3>
-            <p class="muted">Für mehrere Filialen und klaren Workflow.</p>
-
-            <div class="price">
-              <span class="price-amount">ab 699&nbsp;€</span>
-              <span class="price-term">/ Monat</span>
-            </div>
-            <p class="price-sub">Typischer Bereich: 699–1.499&nbsp;€ <span class="muted">zzgl. USt.</span></p>
-
-            <div class="sla" aria-label="Reaktionszeit">
-              <span class="sla-k">SLA</span>
-              <span class="sla-v">Same-Day: bis 14:00 Eingang, sonst nächster Werktag (Antwortentwurf)</span>
-            </div>
-
-            <ul class="price-list">
-              <li>Multi-Standort Standards & Tonalität</li>
-              <li>Freigabe-Workflow (z.B. je Standort) möglich</li>
-              <li>Regelmäßiger Snapshot/Report (nach Absprache)</li>
-              <li>Priorisierung bei hohem Bewertungseingang</li>
+            <a href="#kontakt" class="button primary">Profil‑Check starten</a>
+          </div>
+          <div class="paket-card">
+            <h3>Premium</h3>
+            <p class="price">ab 499 € / Monat<span>zzgl. MwSt.</span></p>
+            <ul>
+              <li>Bis zu 60 Bewertungen/Monat</li>
+              <li>8 Posts pro Monat</li>
+              <li>Reaktionszeit: Same‑Day (&lt;12 h, werktags)</li>
+              <li>Priorisiertes Monitoring & Eskalations‑Playbook</li>
+              <li>2 Standorte inklusive</li>
             </ul>
-
-            <a class="btn btn-ghost btn-block" data-phone-tel href="tel:+490000000000">Kurz anrufen</a>
-          </article>
+            <a href="#kontakt" class="button primary">Profil‑Check starten</a>
+          </div>
         </div>
-
-        <div class="card mt-4">
-          <h3>SLA-Erklärung</h3>
-          <p class="muted">
-            Die Zeiten beziehen sich auf den <strong>Antwortentwurf</strong>. Wenn Freigabe aktiv ist, hängt die Veröffentlichung von Ihrer Freigabe ab.
-            Ohne Freigabe kann nach zuvor festgelegten Standards veröffentlicht werden. Keine Garantien zur Plattform-Moderation.
-          </p>
-          <p class="microcopy">
-            Endpreis-Faktoren: Standorte, Review-Volumen, Freigabe-Schleifen, gewünschte SLA-Stufe, Sonderfälle (z.B. Eskalationen).
-          </p>
+        <div class="addons">
+          <h3>Optionale Add‑ons</h3>
+          <ul>
+            <li><strong>Extra Standort:</strong> 99 € / Monat je zusätzlichem Standort</li>
+            <li><strong>Extra Review‑Paket:</strong> 50 € für je 10 zusätzliche Bewertungen/Monat</li>
+            <li><strong>Same‑Day Upgrade:</strong> 99 € / Monat für schnellste Reaktionszeit (Starter/Wachstum)</li>
+            <li><strong>Setup & Optimierung:</strong> Einmalige 199 € pro Profil (falls kein Profil vorhanden)</li>
+          </ul>
         </div>
-
-        <img
-          class="section-img mt-4"
-          src="assets/dashboard-neutral.png"
-          alt="Neutraler Dashboard-Ausschnitt"
-          loading="lazy"
-          decoding="async"
-          width="1200"
-          height="675"
-        />
+        <div class="transparenz-box">
+          <h3>Transparenz: Woraus setzt sich der Preis zusammen?</h3>
+          <p>Unsere Preise basieren auf dem tatsächlichen Aufwand: Anzahl der Bewertungen, Zeit für individuelle Antworten (Ø 8 Minuten pro Review), Erstellung von Posts & Q&A, Monitoring, Reporting und Beratung. Für jedes Paket kalkulieren wir einen realistischen Stundenaufwand und legen einen fairen Stundensatz zugrunde. So bleibt unsere Arbeit wirtschaftlich und für Sie nachvollziehbar.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section section-muted" id="check" aria-label="Kostenloser Profil-Check">
+    <!-- Why Us Section -->
+    <section id="warum" class="warum">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Kostenloser Profil-Check</h2>
-            <p class="muted">
-              Sie erhalten eine kurze Rückmeldung: Quick Wins, Prioritäten und ob ein Abo bei Ihnen sinnvoll ist.
-              Wenn es eilt: anrufen ist der schnellste Weg.
-            </p>
+        <h2>Warum ProfilWerk?</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <h3>Lokaler Fokus</h3>
+            <p>Wir kennen die Bedürfnisse regionaler Betriebe und sprechen Ihre Sprache. Unser Standort in Bad Bramstedt ermöglicht kurze Wege und persönliche Beratung.</p>
           </div>
-        </div>
-
-        <div class="form-grid">
-          <form id="lead-form" class="form-card" action="https://formspree.io/f/DEIN_FORM_ID" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="Kostenloser Check (ProfilWerk)" />
-            <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
-            <div class="grid-2">
-              <label>
-                Name <span class="req" aria-hidden="true">*</span>
-                <input name="name" type="text" autocomplete="name" required />
-              </label>
-
-              <label>
-                Unternehmen <span class="req" aria-hidden="true">*</span>
-                <input name="company" type="text" autocomplete="organization" required />
-              </label>
-            </div>
-
-            <div class="grid-2">
-              <label>
-                E-Mail <span class="req" aria-hidden="true">*</span>
-                <input name="email" type="email" autocomplete="email" required inputmode="email" />
-              </label>
-
-              <label>
-                Telefon (optional)
-                <input name="phone" type="tel" autocomplete="tel" inputmode="tel" />
-              </label>
-            </div>
-
-            <label>
-              Link zum Google-Unternehmensprofil <span class="req" aria-hidden="true">*</span>
-              <input name="profile_url" type="url" inputmode="url" placeholder="https://g.page/..." required />
-              <span class="microcopy">Tipp: auch ein Maps-Link funktioniert.</span>
-            </label>
-
-            <label>
-              Kurzer Kontext (optional)
-              <textarea name="message" rows="4" placeholder="Branche, Standorte, was aktuell nervt (z.B. negative Reviews, keine Zeit, Freigabe nötig)"></textarea>
-            </label>
-
-            <label class="consent">
-              <input type="checkbox" name="consent" required />
-              <span class="microcopy">
-                Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Anfrage verarbeitet werden. Details in der
-                <a href="datenschutz.html">Datenschutzerklärung</a>.
-              </span>
-            </label>
-
-            <button class="btn btn-primary btn-block" type="submit">Check anfordern</button>
-            <p id="form-status" class="microcopy" role="status" aria-live="polite"></p>
-
-            <p class="microcopy mt-3">
-              Hinweis: Diese Website ist nicht mit Google verbunden. „Google“ ist eine Marke von Google LLC.
-            </p>
-          </form>
-
-          <aside class="side-card" aria-label="Was Sie bekommen">
-            <img
-              class="section-img"
-              src="assets/report-mock.png"
-              alt="Neutraler Mini-Report als Mockup"
-              loading="lazy"
-              decoding="async"
-              width="1200"
-              height="675"
-            />
-
-            <h3 class="mt-4">Was wird geprüft?</h3>
-            <ul class="checklist">
-              <li>Antwortquote & Tonalität (ruhig, passend zur Branche)</li>
-              <li>Aktualität (Öffnungszeiten, Leistungen, Kontaktwege)</li>
-              <li>Vollständigkeit (Kategorien, Attribute, Inhalte)</li>
-              <li>Review-Flow (sauberer Weg zu echten Bewertungen)</li>
-            </ul>
-
-            <div class="callout">
-              <strong>Ergebnis:</strong> kurze Prioritätenliste + Quick Wins. Auf Wunsch: passende Paketempfehlung inkl. SLA.
-            </div>
-
-            <details class="score-details">
-              <summary>
-                <span class="score-badge" id="score-badge">Score: 0/100</span>
-                <span>Profil-Score Vorschau (optional)</span>
-              </summary>
-
-              <p class="microcopy mt-3">
-                Grobe Orientierung anhand Ihrer Auswahl. Kein automatisches Auslesen des Google-Profils.
-              </p>
-
-              <div class="score-grid">
-                <div class="score-panel" aria-label="Score">
-                  <div class="score-bar" aria-hidden="true">
-                    <span class="score-bar-fill" id="score-fill" style="width:0%;"></span>
-                  </div>
-                  <div class="score-meta">
-                    <strong class="score-number" id="score-number">0</strong>
-                    <span class="muted">von 100</span>
-                  </div>
-                </div>
-
-                <div class="score-controls" aria-label="Score-Eingaben">
-                  <label>
-                    Antworten auf Bewertungen
-                    <select id="score-replies">
-                      <option value="0">Fast nie</option>
-                      <option value="10">Manchmal</option>
-                      <option value="20">Meist</option>
-                      <option value="30">Immer</option>
-                    </select>
-                  </label>
-
-                  <label>
-                    Aktualität (Öffnungszeiten, Leistungen, Kontakt)
-                    <select id="score-freshness">
-                      <option value="0">Oft veraltet / unklar</option>
-                      <option value="8">Manchmal veraltet</option>
-                      <option value="16">Meist korrekt</option>
-                      <option value="24">Immer korrekt</option>
-                    </select>
-                  </label>
-
-                  <label>
-                    Profil-Vollständigkeit (Kategorien, Leistungen, Attribute)
-                    <select id="score-completeness">
-                      <option value="0">Lückenhaft</option>
-                      <option value="6">Teilweise gepflegt</option>
-                      <option value="12">Weitgehend vollständig</option>
-                      <option value="18">Sehr vollständig</option>
-                    </select>
-                  </label>
-
-                  <label>
-                    Inhalte (Fotos/Beiträge, sichtbare Aktualität)
-                    <select id="score-content">
-                      <option value="0">Kaum vorhanden</option>
-                      <option value="5">Gelegentlich</option>
-                      <option value="10">Regelmäßig</option>
-                      <option value="14">Konsequent gepflegt</option>
-                    </select>
-                  </label>
-
-                  <label>
-                    Review-Flow (Prozess, um echte Bewertungen zu erhalten)
-                    <select id="score-flow">
-                      <option value="0">Nein</option>
-                      <option value="6">Teilweise</option>
-                      <option value="14">Ja</option>
-                    </select>
-                  </label>
-                </div>
-              </div>
-
-              <div class="score-output">
-                <strong>Quick Wins</strong>
-                <ul class="checklist" id="score-tips"></ul>
-                <p class="microcopy mt-3">
-                  Tipp: Im kostenlosen Check machen wir daraus eine kurze Prioritätenliste mit konkreten nächsten Schritten.
-                </p>
-
-                <div class="score-cta">
-                  <a class="btn btn-phone" data-phone-tel href="tel:+490000000000" aria-label="Jetzt anrufen">
-                    <span class="btn-ic" aria-hidden="true">☎</span>
-                    <span data-phone-text>+49 0000 000000</span>
-                  </a>
-                </div>
-              </div>
-            </details>
-          </aside>
+          <div class="why-item">
+            <h3>Zuverlässige Reaktion</h3>
+            <p>Mit klaren Service‑Level‑Agreements (SLAs) garantieren wir schnelle Antworten – je nach Paket innerhalb von 72 h, 24 h oder am selben Werktag.</p>
+          </div>
+          <div class="why-item">
+            <h3>Transparenz & Datenschutz</h3>
+            <p>Wir arbeiten nach den Richtlinien von Google und halten uns an Datenschutzgesetze (DSGVO/TDDDG). Keine versteckten Gebühren, keine manipulativen Tricks.</p>
+          </div>
+          <div class="why-item">
+            <h3>Bewährter Prozess</h3>
+            <p>Unser strukturierter Ablauf sorgt für Konsistenz und Qualität. Wir liefern methodischen Proof durch Beispielreports und Vorlagen.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="faq" aria-label="Häufige Fragen">
+    <!-- Proof Section -->
+    <section id="proof" class="proof">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>FAQ</h2>
-            <p class="muted">Einwände kurz geklärt, damit es einfach bleibt.</p>
+        <h2>Einblicke & Vorlagen</h2>
+        <div class="proof-content">
+          <div class="proof-image">
+            <img src="assets/report-example.webp" alt="Beispiel eines Analyse‑Reports" loading="lazy" width="500" height="350">
+          </div>
+          <div class="proof-text">
+            <h3>So sieht ein Report aus</h3>
+            <p>Unsere Reports sind klar strukturiert: Kennzahlen, Bewertungen, Tendenzen und Handlungsempfehlungen. So behalten Sie jederzeit den Überblick über Ihre Reputation.</p>
+            <h3>Beispiel‑Antworten</h3>
+            <ul class="example-responses">
+              <li><strong>Positive Bewertung:</strong> „Vielen Dank für Ihr Feedback! Wir freuen uns, dass Sie zufrieden sind, und begrüßen Sie jederzeit wieder.“</li>
+              <li><strong>Neutrale Bewertung:</strong> „Vielen Dank für Ihre Rückmeldung. Wir nehmen Ihre Anmerkungen ernst und möchten unsere Leistung stetig verbessern."</li>
+              <li><strong>Negative Bewertung:</strong> „Es tut uns leid, dass Sie unzufrieden waren. Bitte kontaktieren Sie uns direkt, damit wir gemeinsam eine Lösung finden."</li>
+              <li><strong>Konflikt:</strong> „Wir verstehen Ihr Anliegen. Lassen Sie uns die Situation gemeinsam klären – wir melden uns zeitnah bei Ihnen.“</li>
+            </ul>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="faq">
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2>Häufige Fragen</h2>
+        <div class="faq-list">
           <details>
-            <summary>Brauchen Sie Zugriff auf mein Unternehmensprofil?</summary>
-            <p class="muted">
-              Ja, für echte Pflege ist ein Manager-Zugriff üblich. Sie behalten jederzeit die Kontrolle und können den Zugriff jederzeit entziehen.
-            </p>
+            <summary>Dürfen wir auf jede Bewertung antworten?</summary>
+            <p>Wir antworten auf echte Bewertungen mit Respekt und im Rahmen der Google‑Richtlinien. Bei beleidigenden oder illegalen Inhalten unterstützen wir Sie bei der Meldung.</p>
           </details>
-
           <details>
-            <summary>Veröffentlichen Sie Antworten ohne Rücksprache?</summary>
-            <p class="muted">
-              Optional. Wenn Freigabe aktiv ist, erhalten Sie Entwürfe vorab. Die Veröffentlichung erfolgt nach Ihrer Freigabe.
-              Ohne Freigabe kann nach vorher vereinbarten Standards veröffentlicht werden.
-            </p>
+            <summary>Was ist mit Fake Reviews?</summary>
+            <p>Offensichtliche Fake Reviews melden wir an Google und dokumentieren den Vorgang. Manche Bewertungen lassen sich jedoch nicht entfernen; wir reagieren dann sachlich und lösungsorientiert.</p>
           </details>
-
           <details>
-            <summary>Wie gehen Sie mit kritischen Bewertungen um?</summary>
-            <p class="muted">
-              Ruhig, lösungsorientiert und ohne Diskussion. Ziel: deeskalieren und zur Klärung in den direkten Kontakt einladen.
-            </p>
+            <summary>Wie schnell reagiert ihr?</summary>
+            <p>Abhängig vom gewählten Paket beantworten wir Bewertungen innerhalb von 72 h, 24 h oder am gleichen Werktag. Unsere Monitoring‑Tools informieren uns sofort über neue Einträge.</p>
           </details>
-
           <details>
-            <summary>„Mehr Bewertungen“: geht das sauber?</summary>
-            <p class="muted">
-              Ja, über einen einfachen Prozess nach Leistung oder Termin (Link/QR, kurze Vorlage). Ohne Druck und ohne Incentives.
-            </p>
+            <summary>Welche Branchen betreut ihr?</summary>
+            <p>Wir betreuen Dienstleister, Praxen, Handwerksbetriebe und lokale Unternehmen – überall dort, wo Bewertungen den Erfolg beeinflussen.</p>
           </details>
-
           <details>
-            <summary>Wovon hängt der Paketpreis konkret ab?</summary>
-            <p class="muted">
-              Anzahl Standorte, Bewertungseingang, gewünschte SLA-Stufe, Freigabe-Schleifen und Sonderfälle (z.B. Eskalationen).
-              Darum gibt es „ab“-Preise plus typische Bereiche.
-            </p>
+            <summary>Was kostet es wirklich?</summary>
+            <p>Unsere Pakete starten ab 149 € pro Monat (zzgl. MwSt.) und können jederzeit monatlich gekündigt werden. Die Preise richten sich nach Umfang, Anzahl der Bewertungen und gewünschter Reaktionszeit.</p>
           </details>
-
           <details>
-            <summary>Laufzeit / Kündigung?</summary>
-            <p class="muted">
-              Üblich ist monatlich kündbar nach Startphase. Details werden im Check transparent abgestimmt.
-            </p>
+            <summary>Wie funktioniert die Kündigung?</summary>
+            <p>Alle Pakete sind monatlich kündbar. Sie zahlen nur für den jeweiligen Monat; es gibt keine versteckten Kosten oder langen Bindungen.</p>
+          </details>
+          <details>
+            <summary>Was braucht ihr von mir?</summary>
+            <p>Wir benötigen einen Zugriff auf Ihr Google‑Unternehmensprofil sowie Basisinformationen über Ihre Leistungen, Öffnungszeiten und Ansprechpartner. Den Rest übernehmen wir.</p>
+          </details>
+          <details>
+            <summary>Wie wirkt sich das auf SEO aus?</summary>
+            <p>Ein gepflegtes Profil mit zeitnahen Antworten fördert Vertrauen und kann positive Signale an Google senden. Wir versprechen keine Platz‑1‑Garantien, arbeiten aber stets im Rahmen der offiziellen Richtlinien und Best Practices.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <section class="final-cta" id="final" aria-label="Finaler Call to Action">
-      <div class="container final-cta-inner">
-        <div class="final-cta-copy">
-          <h2>In 10 Minuten klären, ob es passt</h2>
-          <p class="muted">
-            Ein kurzer Blick reicht oft, um die größten Reibungspunkte zu finden.
-            Kostenlos und unverbindlich, ohne Druck.
-          </p>
-
-          <div class="final-cta-actions">
-            <a class="btn btn-primary" href="#check">Kostenloser Check</a>
-            <a class="btn btn-phone" data-phone-tel href="tel:+490000000000">
-              <span class="btn-ic" aria-hidden="true">☎</span>
-              <span data-phone-text>+49 0000 000000</span>
-            </a>
+    <!-- Kontakt Section -->
+    <section id="kontakt" class="kontakt">
+      <div class="container">
+        <h2>Kontakt aufnehmen</h2>
+        <p>Fordern Sie jetzt Ihren kostenlosen Profil‑Check an oder rufen Sie uns direkt an.</p>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+            <span class="error-message" id="name-error" aria-live="polite"></span>
           </div>
-        </div>
-
-        <div class="final-cta-media" aria-label="Beratung am Telefon">
-          <img
-            class="section-img"
-            src="assets/phone-call.png"
-            alt="Professionelle Beratung am Telefon"
-            loading="lazy"
-            decoding="async"
-            width="1200"
-            height="800"
-          />
-        </div>
+          <div class="form-group">
+            <label for="email">E‑Mail <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+            <span class="error-message" id="email-error" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="message">Nachricht / Link zum Google‑Profil</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="button primary">Senden</button>
+          <p class="form-note">Wir verwenden Ihre Daten ausschließlich zur Bearbeitung Ihrer Anfrage. Weitere Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <p class="footer-brand">ProfilWerk</p>
-        <p class="footer-small">
-          <a data-phone-tel href="tel:+490000000000"><span data-phone-text>+49 0000 000000</span></a>
-          <span class="sep" aria-hidden="true">•</span>
-          <a href="mailto:info@DEINE-DOMAIN.DE">info@DEINE-DOMAIN.DE</a>
-        </p>
-        <p class="footer-small">© <span id="year"></span> ProfilWerk</p>
-      </div>
+  <!-- Sticky Mobile Bar -->
+  <div class="mobile-sticky-cta" id="mobile-cta">
+    <a href="#kontakt" class="button primary">Profil‑Check</a>
+    <a href="tel:+491629625625" class="button secondary">Anrufen</a>
+  </div>
 
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="#top">Nach oben</a>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </nav>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-contact">
+        <h3>Kontakt</h3>
+        <p>ProfilWerk<br>
+          Standort: Bad Bramstedt (24576), Deutschland<br>
+          Tel.: <a href="tel:+491629625625">+49 162 9625625</a><br>
+          E‑Mail: <a href="mailto:info@profilpflege.de">info@profilpflege.de</a>
+        </p>
+      </div>
+      <div class="footer-links">
+        <h3>Rechtliches</h3>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+        <p><small>© 2025 ProfilWerk. Bitte lassen Sie die Rechtsseiten anwaltlich prüfen.</small></p>
+      </div>
     </div>
   </footer>
-
-  <script src="main.js" defer></script>
 </body>
 </html>
